@@ -1,0 +1,29 @@
+--no-install-recommends gnome-core
+network-manager-gnome
+gnome-tweaks
+ufw
+make gcc ripgrep zip unzip git xclip curl
+neovim
+tmux
+vim
+starship
+neofetch
+fastfetch
+fzf
+autojump
+flatpak
+snapd
+# snapd ghostty
+# flatpak brave
+# flatpak proton vpn
+# flatpak proton mail
+# flatpak discord
+ibus
+ibus-pinyin
+nodejs npm
+python3-pip
+python3-venv
+grub-customizer
+gparted
+vlc
+transmission
