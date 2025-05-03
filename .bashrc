@@ -112,6 +112,22 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# vi mode 
 set -o vi
+
+# for boot.dev
 export PATH="$PATH:/home/juandrzej/worldbanc/private/bin"
+
+# for starship
 eval "$(starship init bash)"
+
+# for autojump
+. /usr/share/autojump/autojump.sh
+
+# aliases
+alias nala-up="sudo nala update && sudo nala upgrade"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+source '/home/juandrzej/.bash_completions/nala.sh'
