@@ -126,6 +126,7 @@ eval "$(starship init bash)"
 
 # aliases
 alias nala-up="sudo nala update && sudo nala upgrade"
+alias gitlog="git log --oneline --decorate --graph --parents"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
