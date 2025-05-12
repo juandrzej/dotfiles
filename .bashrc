@@ -15,9 +15,14 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+# # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+# HISTSIZE=1000
+# HISTFILESIZE=2000
+
+# Expand the history size
+export HISTFILESIZE=10000
+export HISTSIZE=500
+export HISTTIMEFORMAT="%F %T" # add timestamp to history
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -124,11 +129,19 @@ eval "$(starship init bash)"
 # for autojump
 . /usr/share/autojump/autojump.sh
 
-# aliases
-alias nala-up="sudo nala update && sudo nala upgrade"
-alias gitlog="git log --oneline --decorate --graph --parents"
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 source '/home/juandrzej/.bash_completions/nala.sh'
+
+# GitHub Titus Additions
+
+gcom() {
+	git add .
+	git commit -m "$1"
+}
+lazyg() {
+	git add .
+	git commit -m "$1"
+	git push
+}
