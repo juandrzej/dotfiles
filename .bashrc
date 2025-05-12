@@ -145,3 +145,4 @@ lazyg() {
 	git commit -m "$1"
 	git push
 }
+export PATH=$PATH:$HOME/go/bin
