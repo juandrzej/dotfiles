@@ -8,6 +8,14 @@ case $- in
       *) return;;
 esac
 
+# If fastfetch installed, run it.
+if command -v fastfetch &> /dev/null; then
+    # Only run fastfetch if we're in an interactive shell
+    if [[ $- == *i* ]]; then
+        fastfetch
+    fi
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
