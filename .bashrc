@@ -2,13 +2,13 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# If not running interactively, don't do anything
+# If not running interactively, don't do anything (exit early)
 case $- in
     *i*) ;;
       *) return;;
 esac
 
-# If fastfetch installed, run it.
+# If fastfetch installed, run it
 if command -v fastfetch &> /dev/null; then
     # Only run fastfetch if we're in an interactive shell
     if [[ $- == *i* ]]; then
@@ -16,21 +16,15 @@ if command -v fastfetch &> /dev/null; then
     fi
 fi
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-# HISTSIZE=1000
-# HISTFILESIZE=2000
-
 # Expand the history size
-export HISTFILESIZE=10000
-export HISTSIZE=500
-export HISTTIMEFORMAT="%F %T" # add timestamp to history
+HISTFILESIZE=10000
+HISTSIZE=500
+HISTTIMEFORMAT="%F %T " # add timestamp to history
+
+HISTCONTROL=ignoreboth # ignoreboth = ignoredups:ignorespace
+# HISTCONTROL=erasedups:ignoredups:ignorespace  # Remove all duplicates + space protection
+shopt -s histappend  # Append history instead of overwriting
+PROMPT_COMMAND='history -a'  # Save history after every command
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
