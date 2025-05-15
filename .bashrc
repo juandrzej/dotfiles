@@ -8,13 +8,13 @@ case $- in
       *) return;;
 esac
 
-# If fastfetch installed, run it
-if command -v fastfetch &> /dev/null; then
-    # Only run fastfetch if we're in an interactive shell
-    if [[ $- == *i* ]]; then
-        fastfetch
-    fi
-fi
+# # If fastfetch installed, run it
+# if command -v fastfetch &> /dev/null; then
+#     # Only run fastfetch if we're in an interactive shell
+#     if [[ $- == *i* ]]; then
+#         fastfetch
+#     fi
+# fi
 
 # Expand the history size
 HISTFILESIZE=10000
@@ -29,6 +29,14 @@ PROMPT_COMMAND='history -a'  # Save history after every command
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+
+# Ignore case on auto-completion
+# Note: bind used instead of sticking these in .inputrc
+bind "set completion-ignore-case on"
+
+# Show auto-completion list automatically, without double tab
+bind "set show-all-if-ambiguous On"
+
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
