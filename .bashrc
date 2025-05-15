@@ -125,6 +125,9 @@ set -o vi
 # for boot.dev
 export PATH="$PATH:/home/juandrzej/worldbanc/private/bin"
 
+# for daily updates
+export PATH="$PATH:/home/juandrzej/Code/dotfiles/bin"
+
 # for starship
 eval "$(starship init bash)"
 

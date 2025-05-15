@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Daily Update Script
+# Performs system updates in this order:
+# 1. flatpak update
+# 2. tmux updates
+# 3. nvim lazy updates
+# 4. nvim mason updates
+
+
+# Function to perform flatpak updates
+flatpak_updates() {
+    echo "Starting flatpak updates..."
+    flatpak update -y
+}
+
+# Function to update tmux (assuming you're using a plugin manager like tpm)
+tmux_updates() {
+    echo "Updating tmux plugins..."
+    ~/.tmux/plugins/tpm/bin/update_plugins all
+}
+
+# Function to update neovim lazy plugins
+nvim_lazy_updates() {
+    echo "Updating neovim lazy plugins..."
+    nvim --headless "+Lazy! sync" +qa
+}
+
+# Function to update neovim mason packages
+nvim_mason_updates() {
+    echo "Updating neovim mason packages..."
+    nvim --headless "+MasonUpdate" +qa
+}
+
+# Main execution
+flatpak_updates
+tmux_updates
+nvim_lazy_updates
+nvim_mason_updates
+
+echo ""
+echo "All updates completed successfully!"
