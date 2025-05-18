@@ -1,24 +1,68 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
-[░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+[](magenta)\
+$os\
+$username\
+[](bg:cyan fg:magenta)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+[](bg:green2 fg:cyan)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
-$nodejs\
+[](fg:green2 bg:green)\
+$c\
 $rust\
 $golang\
+$nodejs\
 $php\
+$java\
+$kotlin\
+$haskell\
 $python\
-[](fg:#212736 bg:#1d2230)\
+[](fg:green bg:magenta)\
+$conda\
+[](fg:magenta bg:blue)\
 $time\
-[ ](fg:#1d2230)\
-\n$character"""
+[ ](fg:blue)\
+$cmd_duration\
+$line_break\
+$character"""
+
+palette = 'tokyonight_moon'
+
+[os]
+disabled = false
+style = "bg:magenta fg:black"
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bg:magenta fg:black"
+style_root = "bg:magenta fg:black"
+format = '[ $user]($style)'
 
 [directory]
-style = "fg:#e3e5e5 bg:#769ff0"
+style = "bg:cyan fg:black"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -26,45 +70,112 @@ truncation_symbol = "…/"
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Music" = " "
+"Music" = "󰝚 "
 "Pictures" = " "
+"Code" = "󰲋 "
 
 [git_branch]
 symbol = ""
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:green2"
+format = '[[ $symbol $branch ](fg:black bg:green2)]($style)'
 
 [git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+style = "bg:green2"
+format = '[[($all_status$ahead_behind )](fg:black bg:green2)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
+
+[c]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
 
 [php]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
+
+[java]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:black bg:green)]($style)'
 
 [python]
-symbol = " "
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+symbol = ""
+style = "bg:green"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:black bg:green)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:magenta"
+format = '[[ $symbol( $context) ](fg:black bg:magenta)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:black bg:magenta"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+time_format = "%R"
+style = "bg:blue"
+format = '[[  $time ](fg:black bg:blue)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:magenta)'
+vimcmd_replace_symbol = '[❮](bold fg:magenta)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:magenta"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000
+
+[palettes.tokyonight_moon]
+black = "#1b1d2b"
+blue = "#82aaff"
+cyan = "#86e1fc"
+green = "#c3e88d"
+green1 = "#4fd6be"
+green2 = "#41a6b5"
+magenta = "#c099ff"
+magenta2 = "#ff007c"
+orange = "#ff966c"
+purple = "#fca7ea"
+red = "#ff757f"
+red1 = "#c53b53"
+yellow = "#ffc777"

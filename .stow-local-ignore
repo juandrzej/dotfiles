@@ -2,3 +2,4 @@
 bin
 LICENSE
 to_install.log
+.config/starship.toml.bak
