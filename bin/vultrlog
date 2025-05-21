@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# SSH into Vultr server and check portfolio site logs
+ssh vultr "journalctl -u portfolio_site --since today"
