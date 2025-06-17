@@ -37,6 +37,18 @@ bind "set completion-ignore-case on"
 # Show auto-completion list automatically, without double tab
 bind "set show-all-if-ambiguous On"
 
+# Set the default editor
+if command -v nvim &> /dev/null; then
+    export EDITOR=nvim
+    export VISUAL=nvim
+    alias vim='nvim'
+    alias vi='nvim'
+    alias svim='sudo nvim'
+    alias vis='nvim "+set si"'
+else
+    export EDITOR=vim
+    export VISUAL=vim
+fi
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
