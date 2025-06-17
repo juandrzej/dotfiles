@@ -1,0 +1,12 @@
+--no-install-recommends gnome-core
+network-manager-gnome gnome-tweaks
+ufw
+make gcc ripgrep zip unzip git xclip curl
+vim neovim tmux kitty
+fzf autojump starship fastfetch stow
+fd-find duf ranger mpv
+flatpak
+libreoffice grub-customizer transmission-gtk
+nodejs npm
+python3 python3-pip python3-venv
+ibus ibus-pinyin
