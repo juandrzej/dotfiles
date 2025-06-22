@@ -148,6 +148,8 @@ export PATH="$PATH:/home/juandrzej/worldbanc/private/bin"
 # for daily updates
 export PATH="$PATH:/home/juandrzej/Code/dotfiles/bin"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
 # for starship and zoxide
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"

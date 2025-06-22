@@ -5,7 +5,7 @@ network-manager-gnome gnome-tweaks
 
 ufw
 make gcc ripgrep zip unzip git xclip curl
-vim neovim tmux kitty
+vim neovim tmux alacritty
 fzf zoxide starship fastfetch stow
 fd-find duf ranger mpv lsd ncdu
 
