@@ -1,5 +1,6 @@
 .git
 bin
 LICENSE
-to_install.log
+flatpaks_install.sh
+to_install_nala.log
 .config/starship.toml.bak
