@@ -148,11 +148,9 @@ export PATH="$PATH:/home/juandrzej/worldbanc/private/bin"
 # for daily updates
 export PATH="$PATH:/home/juandrzej/Code/dotfiles/bin"
 
-# for starship
+# for starship and zoxide
 eval "$(starship init bash)"
-
-# for autojump
-. /usr/share/autojump/autojump.sh
+eval "$(zoxide init bash)"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
