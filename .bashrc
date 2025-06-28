@@ -142,11 +142,8 @@ fi
 # vi mode 
 set -o vi
 
-# for boot.dev
-export PATH="$PATH:/home/juandrzej/worldbanc/private/bin"
-
 # for daily updates
-export PATH="$PATH:/home/juandrzej/Code/dotfiles/bin"
+export PATH="$PATH:/home/juandrzej/dotfiles/bin"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
@@ -170,4 +167,5 @@ lazyg() {
 	git commit -m "$1"
 	git push
 }
+
 export PATH=$PATH:$HOME/go/bin

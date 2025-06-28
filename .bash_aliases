@@ -1,3 +1,9 @@
+# Alias's to modified commands
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='trash -v'
+alias mkdir='mkdir -p'
+
 # Change directory aliases
 alias ..='cd ..'
 alias ...='cd ../..'
