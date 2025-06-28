@@ -1,6 +1,7 @@
 theme = tokyonight_moon
 background-opacity = 0.7
-font-family = "CodeNewRoman Nerd Font"
+# font-family = "CodeNewRoman Nerd Font"
+font-family = "JetBrainsMono Nerd Font"
 
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+shift+enter=toggle_maximize
