@@ -4,7 +4,7 @@
     "height": 40,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/recorder", "tray", "pulseaudio", "temperature", "cpu", "memory", "network", "custom/power"],
+    "modules-right": ["custom/recorder", "idle_inhibitor", "tray", "pulseaudio", "temperature", "cpu", "memory", "custom/network"],
     "sway/mode": {
         "format": " {}"
     },
@@ -46,14 +46,25 @@
 
     "cpu": {
         "interval": 5,
-        "format": "︁ {}%",
+        "format": "󰘚 {}%",
         "max-length": 10
     },
 
     "memory": {
         "interval": 15,
-        "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
+        "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
         "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "👁️",
+            "deactivated": "😴"
+        },
+        // "tooltip": true,
+        // "tooltip-format-activated": "Idle inhibitor active - preventing sleep/lock",
+        // "tooltip-format-deactivated": "Idle inhibitor inactive - sleep/lock enabled"
     },
 
     "custom/power": {
@@ -62,10 +73,10 @@
 		"menu": "on-click",
 		"menu-file": "/usr/share/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
 			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			"hibernate": "systemctl hibernate",
+			"reboot": "reboot",
+			"shutdown": "shutdown",
 		}
     },
 
@@ -81,25 +92,32 @@
 
     "network": {
         "format": "{icon}",
-        "format-alt": "<span font='Font Awesome 5 Free 10'>︁</span> ︁{ipaddr}/{cidr} {icon}",
-        "format-alt-click": "click-left",
+        // "format-alt": "<span font='Font Awesome 5 Free 10'>󰩟</span> ︁{ipaddr}/{cidr} {icon}",
+        // "format-alt-click": "click-left",
         "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
-        "format-ethernet": "<span font='Font Awesome 5 Free 10'>︁</span> {ifname}",
+        "format-ethernet": "<span font='Font Awesome 5 Free 10'>󰌗</span> {ifname}",
         "format-disconnected": "⚠ Disconnected",
+        "tooltip": false
+    },
+
+    "custom/network": {
+        "exec": "~/.config/waybar/network.sh",
+        "interval": 5,
+        "format": " {} ",
         "tooltip": false
     },
 
     "pulseaudio": {
         "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-        "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-        "format-alt-click": "click-right",
-        "format-muted": "<span font='Font Awesome 5 Free 11'></span>",
+        // "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+        // "format-alt-click": "click-right",
+        "format-muted": "<span font='Font Awesome 5 Free 11'>󰖁</span>",
         "format-icons": {
             "phone": [" ", " ", " ", " "],
             "default": ["", "", "", ""]
         },
         "scroll-step": 2,
-        "on-click": "pavucontrol",
+        // "on-click": "pavucontrol",
         "tooltip": false
     },
 
