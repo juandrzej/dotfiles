@@ -30,10 +30,10 @@ alias svim='sudo vim'
 alias snvim='sudo nvim'
 
 # Power commands
-alias godaddy="systemctl suspend-then-hibernate"
 alias gomommy="systemctl suspend"
-alias gopapi="sudo shutdown now"
-alias goreset="sudo reboot"
+alias godaddy="systemctl suspend-then-hibernate"
+alias papi="sudo shutdown now"
+alias phoenix="sudo reboot"
 
 
 alias nala-up="sudo nala update && sudo nala upgrade"
