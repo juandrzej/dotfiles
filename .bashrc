@@ -1,12 +1,22 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything (exit early)
 case $- in
     *i*) ;;
       *) return;;
 esac
+
+# Enable bash programmable completion features in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# Alias definitions
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # # If fastfetch installed, run it
 # if command -v fastfetch &> /dev/null; then
@@ -15,6 +25,9 @@ esac
 #         fastfetch
 #     fi
 # fi
+
+# vi mode 
+set -o vi
 
 # Expand the history size
 HISTFILESIZE=10000
@@ -41,10 +54,6 @@ bind "set show-all-if-ambiguous On"
 if command -v nvim &> /dev/null; then
     export EDITOR=nvim
     export VISUAL=nvim
-    alias vim='nvim'
-    alias vi='nvim'
-    alias svim='sudo nvim'
-    alias vis='nvim "+set si"'
 else
     export EDITOR=vim
     export VISUAL=vim
@@ -114,42 +123,8 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-# vi mode 
-set -o vi
-
 # for daily updates
 export PATH="$PATH:/home/juandrzej/dotfiles/bin"
-
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-# for starship and zoxide
-eval "$(starship init bash)"
-eval "$(zoxide init bash)"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -157,7 +132,6 @@ eval "$(zoxide init bash)"
 source '/home/juandrzej/.bash_completions/nala.sh'
 
 # GitHub Titus Additions
-
 gcom() {
 	git add .
 	git commit -m "$1"
@@ -169,3 +143,9 @@ lazyg() {
 }
 
 export PATH=$PATH:$HOME/go/bin
+
+# Setup fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+# Setup starship (command prompt) and zoxide (better cd)
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
