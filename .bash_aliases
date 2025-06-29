@@ -10,6 +10,7 @@ alias lla='lsd -lA'
 alias lr='lsd -lR' # recursive
 alias lf="lsd -l | egrep -v '^d'"  # files only
 alias ldir="lsd -l | egrep '^d'"   # directories only
+alias atree='lsd --tree --all --ignore-glob .git'
 
 
 # Remove a directory and all files
