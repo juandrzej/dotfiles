@@ -1,0 +1,4 @@
+sway waybar wofi mako-notifier swaybg
+swayidle swaylock
+grim slurp wl-clipboard pcmanfm
+pulseaudio-utils
