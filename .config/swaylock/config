@@ -1,0 +1,47 @@
+# Dark background
+# color=1a1a1a
+
+# Use an image instead of solid color
+image=/home/juandrzej/Pictures/focuson.jpg
+scaling=fill
+
+# Security
+ignore-empty-password
+
+# Appearance
+font=sans-serif
+font-size=24
+show-failed-attempts
+show-keyboard-layout
+
+# Ring colors (subtle on dark background)
+ring-color=505050
+ring-clear-color=505050
+ring-caps-lock-color=f39c12
+ring-ver-color=27ae60
+ring-wrong-color=e74c3c
+
+# Key highlight
+key-hl-color=7f8c8d
+separator-color=00000000
+
+# Text colors
+text-color=ecf0f1
+text-clear-color=ecf0f1
+text-caps-lock-color=f39c12
+text-ver-color=27ae60
+text-wrong-color=e74c3c
+
+# Inside ring (optional, makes it cleaner)
+inside-color=2c3e50
+inside-clear-color=2c3e50
+inside-caps-lock-color=2c3e50
+inside-ver-color=2c3e50
+inside-wrong-color=2c3e50
+
+# Lines
+line-color=34495e
+line-clear-color=34495e
+line-caps-lock-color=34495e
+line-ver-color=34495e
+line-wrong-color=34495e
