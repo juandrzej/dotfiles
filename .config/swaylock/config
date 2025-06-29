@@ -1,47 +1,51 @@
+# Security
+ignore-empty-password
+show-failed-attempts
+show-keyboard-layout
+
 # Dark background
 # color=1a1a1a
 
 # Use an image instead of solid color
-image=/home/juandrzej/Pictures/focuson.jpg
+image=/home/juandrzej/Pictures/tokyo1.jpg
 scaling=fill
-
-# Security
-ignore-empty-password
 
 # Appearance
 font=sans-serif
-font-size=24
-show-failed-attempts
-show-keyboard-layout
+font-size=26
 
-# Ring colors (subtle on dark background)
-ring-color=505050
-ring-clear-color=505050
-ring-caps-lock-color=f39c12
-ring-ver-color=27ae60
-ring-wrong-color=e74c3c
+# Make circle bigger
+indicator-radius=100
+indicator-thickness=20
+
+# Ring colors (Tokyo Night palette)
+ring-color=7aa2f7
+ring-clear-color=9ece6a
+ring-caps-lock-color=e0af68
+ring-ver-color=bb9af7
+ring-wrong-color=f7768e
 
 # Key highlight
-key-hl-color=7f8c8d
+key-hl-color=73daca
 separator-color=00000000
 
 # Text colors
-text-color=ecf0f1
-text-clear-color=ecf0f1
-text-caps-lock-color=f39c12
-text-ver-color=27ae60
-text-wrong-color=e74c3c
+text-color=c0caf5
+text-clear-color=c0caf5
+text-caps-lock-color=e0af68
+text-ver-color=bb9af7
+text-wrong-color=f7768e
 
-# Inside ring (optional, makes it cleaner)
-inside-color=2c3e50
-inside-clear-color=2c3e50
-inside-caps-lock-color=2c3e50
-inside-ver-color=2c3e50
-inside-wrong-color=2c3e50
+# Inside ring (darker Tokyo Night background)
+inside-color=24283b
+inside-clear-color=24283b
+inside-caps-lock-color=24283b
+inside-ver-color=24283b
+inside-wrong-color=24283b
 
-# Lines
-line-color=34495e
-line-clear-color=34495e
-line-caps-lock-color=34495e
-line-ver-color=34495e
-line-wrong-color=34495e
+# Lines (subtle)
+line-color=414868
+line-clear-color=414868
+line-caps-lock-color=414868
+line-ver-color=414868
+line-wrong-color=414868
