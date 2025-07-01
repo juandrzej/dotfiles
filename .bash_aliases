@@ -11,6 +11,7 @@ alias lr='lsd -lR' # recursive
 alias lf="lsd -l | egrep -v '^d'"  # files only
 alias ldir="lsd -l | egrep '^d'"   # directories only
 alias atree='lsd --tree --all --ignore-glob .git'
+alias bat='batcat'
 
 
 # Remove a directory and all files
