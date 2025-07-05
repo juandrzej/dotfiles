@@ -3,6 +3,7 @@ alias cp='cp -i' # prompt before overwriting files
 alias mv='mv -i'
 alias rm='trash -v' # using safer trash-cli
 alias mkdir='mkdir -p' # auto create parent dir/s
+
 alias ls='lsd'
 alias ll='lsd -l' # long format (lsd has default -h)
 alias la='lsd -A' # hidden files exluding . & ..
@@ -10,9 +11,9 @@ alias lla='lsd -lA'
 alias lr='lsd -lR' # recursive
 alias lf="lsd -l | egrep -v '^d'"  # files only
 alias ldir="lsd -l | egrep '^d'"   # directories only
-alias atree='lsd --tree --all --ignore-glob .git'
-alias bat='batcat'
 
+alias atree='lsd --tree --all --ignore-glob .git --ignore-glob __pycache__'
+alias bat='batcat'
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
