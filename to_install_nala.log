@@ -1,10 +1,9 @@
-ufw
 make gcc ripgrep zip unzip git xclip curl
 vim neovim tmux alacritty
-fzf zoxide starship fastfetch stow
-fd-find ranger mpv lsd ncdu
-trash-cli bash-completion ffmpeg file
-procs du-dust bat duf
+
+fzf zoxide starship fastfetch stow ranger mpv
+lsd fd-find ncdu procs du-dust bat duf tldr sd
+trash-cli bash-completion ffmpeg file ufw 
 
 flatpak
 libreoffice grub-customizer gparted
