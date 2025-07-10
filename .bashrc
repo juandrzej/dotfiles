@@ -82,6 +82,6 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 # If fastfetch installed, run it
-if command -v fastfetch &> /dev/null; then
-    fastfetch
-fi
+# if command -v fastfetch &> /dev/null; then
+#     fastfetch
+# fi
