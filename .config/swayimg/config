@@ -14,4 +14,8 @@ l = step_right
 Shift+d = exec trash -v '%'; skip_file
 Space = mode viewer
 
-
+[list]
+# Add files from the same directory as the first file (yes/no)
+all = yes
+# Read directories recursively (yes/no)
+recursive = no
