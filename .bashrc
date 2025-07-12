@@ -56,7 +56,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # For daily updates and other custom scripts
-export PATH="$PATH:/home/juandrzej/dotfiles/bin"
+# export PATH="$PATH:/home/juandrzej/dotfiles/bin"
 # For boot.dev
 # export PATH=$PATH:$HOME/go/bin
 
