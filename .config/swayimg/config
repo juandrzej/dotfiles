@@ -1,0 +1,17 @@
+[keys.viewer]
+h = prev_file
+j = next_file
+k = prev_file
+l = next_file
+Shift+d = exec trash -v '%'; skip_file
+Space = mode gallery
+
+[keys.gallery]
+h = step_left
+j = step_down
+k = step_up
+l = step_right
+Shift+d = exec trash -v '%'; skip_file
+Space = mode viewer
+
+
