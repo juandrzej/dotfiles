@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# Simple clipboard history manager
+# Usage: 
+#   clipboard-history daemon    # Start monitoring
+#   clipboard-history list      # Show history with fzf
+#   clipboard-history gui      # Show history with wofi
+#   clipboard-history clear     # Clear history
+
+HIST_FILE="$HOME/.clipboard_history"
+MAX_ENTRIES=100
+
+case "$1" in
+    daemon)
+        echo "Starting clipboard history daemon..."
+        # Monitor clipboard and append to history file
+        wl-paste -w sh -c '
+            clip=$(wl-paste -n)
+            if [ -n "$clip" ] && [ ${#clip} -lt 10000 ]; then
+                # Add timestamp and content
+                echo "[$(date "+%Y-%m-%d %H:%M:%S")] $clip" >> "'"$HIST_FILE"'"
+		
+                # Keep only last MAX_ENTRIES
+                tail -n "'"$MAX_ENTRIES"'" "'"$HIST_FILE"'" > "'"$HIST_FILE"'.tmp"
+                mv "'"$HIST_FILE"'.tmp" "'"$HIST_FILE"'"
+            fi
+        '
+        ;;
+
+    list)
+        if [ ! -f "$HIST_FILE" ]; then
+            echo "No clipboard history found. Start daemon first."
+            exit 1
+        fi
+	
+        # Use fzf to select from history and copy to clipboard
+        selected=$(tac "$HIST_FILE" | fzf --preview 'echo {2..}' --preview-window=wrap)
+
+        if [ -n "$selected" ]; then
+            # Extract content (everything after timestamp)
+            content=$(echo "$selected" | sed 's/^\[[^]]*\] //')
+            echo "$content" | wl-copy
+            echo "Copied to clipboard!"
+        fi
+        ;;
+
+    gui)
+        if [ ! -f "$HIST_FILE" ]; then
+            notify-send "No clipboard history found. Start daemon first."
+            exit 1
+        fi
+	
+        # Use wofi for GUI selection
+        selected=$(tac "$HIST_FILE" | wofi --dmenu --prompt "Clipboard History")
+
+        if [ -n "$selected" ]; then
+            # Extract content (everything after timestamp)
+            content=$(echo "$selected" | sed 's/^\[[^]]*\] //')
+            echo "$content" | wl-copy
+            notify-send "Copied to clipboard!"
+        fi
+        ;;
+
+    clear)
+        trash -v "$HIST_FILE"
+        echo "Clipboard history cleared."
+        ;;
+
+    *)
+	echo "Usage: $0 {daemon|list|gui|clear}"
+        echo "  daemon - Start clipboard monitoring"
+        echo "  list   - Show history with fzf selection"
+	echo "  gui    - Show history with wofi selection (GUI)"
+        echo "  clear  - Clear history file"
+        ;;
+esac

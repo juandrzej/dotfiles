@@ -273,5 +273,12 @@ exec swaymsg 'workspace 7; exec alacritty'
 exec brave-browser
 exec flatpak run md.obsidian.Obsidian
 
+# Start clipboard history daemon
+exec clipboard-history daemon
+# GUI version (no terminal needed)
+bindsym $mod+Ctrl+v exec clipboard-history gui
+# Or terminal version
+bindsym $mod+Shift+v exec alacritty -e clipboard-history list
+
 # Return to workspace 1 after startup
 exec swaymsg 'workspace 1'
