@@ -55,13 +55,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# Set PATH for user binaries (first => symlink or dir)
-if [ -L "$HOME/bin" ] || [ -d "$HOME/bin" ]; then
-    PATH="$HOME/bin:$PATH"
-fi
+# Set PATH for user binaries
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+if [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # For nala completions
 [ -f "$HOME/.bash_completions/nala.sh" ] && source "$HOME/.bash_completions/nala.sh"
 
