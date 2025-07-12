@@ -1,6 +1,6 @@
 # Read `man 5 sway` for a complete reference.
 
-# System includes
+### System includes
 include /etc/sway/config.d/*
 include /etc/sway/config-vars.d/*
 
@@ -12,14 +12,12 @@ set $left h
 set $down j
 set $up k
 set $right l
-
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
 set $menu wofi --show drun
 
 ### Output configuration
-#
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # This is commented in Debian, because the Sway wallpaper files are in a separate
 # package `sway-backgrounds`. Installing this package drops a config file to
