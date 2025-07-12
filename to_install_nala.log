@@ -3,7 +3,7 @@ vim neovim tmux alacritty
 
 fzf zoxide starship fastfetch stow ranger mpv
 lsd fd-find ncdu procs du-dust bat duf tldr sd btop
-trash-cli bash-completion ffmpeg file ufw keyd
+trash-cli bash-completion ffmpeg file ufw keyd gh
 
 flatpak
 libreoffice grub-customizer gparted
