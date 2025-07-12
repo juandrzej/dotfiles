@@ -1,5 +1,4 @@
 .git
-bin
 LICENSE
 flatpaks_install.sh
 to_install_nala.log

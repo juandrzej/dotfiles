@@ -276,9 +276,9 @@ exec flatpak run md.obsidian.Obsidian
 # Start clipboard history daemon
 exec clipboard-history daemon
 # GUI version (no terminal needed)
-bindsym $mod+Ctrl+v exec ~/dotfiles/bin/clipboard-history gui
+bindsym $mod+Ctrl+v exec ~/bin/clipboard-history gui
 # Or terminal version
-bindsym $mod+Shift+v exec alacritty -e ~/dotfiles/bin/clipboard-history list
+bindsym $mod+Shift+v exec alacritty -e ~/bin/clipboard-history list
 
 # Return to workspace 1 after startup
 exec swaymsg 'workspace 1'

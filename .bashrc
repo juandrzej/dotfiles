@@ -55,13 +55,13 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# For daily updates and other custom scripts
-# export PATH="$PATH:/home/juandrzej/dotfiles/bin"
-# For boot.dev
-# export PATH=$PATH:$HOME/go/bin
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# Set PATH for user binaries (first => symlink or dir)
+if [ -L "$HOME/bin" ] || [ -d "$HOME/bin" ]; then
+    PATH="$HOME/bin:$PATH"
+fi
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 # For nala completions
 [ -f "$HOME/.bash_completions/nala.sh" ] && source "$HOME/.bash_completions/nala.sh"
 
