@@ -1,8 +1,0 @@
-include tokyonight_storm.conf
-
-# Font
-font_family CodeNewRoman Nerd Font
-font_size 12
-
-# Opacity
-background_opacity 0.7
