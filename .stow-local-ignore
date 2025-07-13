@@ -1,7 +1,4 @@
 .git
+logs
+README.md
 LICENSE
-flatpaks_install.sh
-to_install_nala.log
-to_install_sway.log
-to_install_gnome.log
-.config/starship.toml.bak
