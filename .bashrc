@@ -87,3 +87,6 @@ source ~/.config/fzf/tokyonight_storm.sh
 # if command -v fastfetch &> /dev/null; then
 #     fastfetch
 # fi
+
+# Use custom nvim for man pages
+export MANPAGER="nvim -u ~/.config/nvim-man/init.lua +Man!"
