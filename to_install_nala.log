@@ -2,7 +2,7 @@ make gcc ripgrep zip unzip git xclip curl
 vim neovim tmux alacritty
 
 fzf zoxide starship fastfetch stow ranger mpv
-lsd fd-find ncdu procs du-dust bat duf tldr sd btop
+lsd fd-find ncdu procs du-dust bat duf tldr sd btop git-delta
 trash-cli bash-completion ffmpeg file ufw keyd gh
 
 flatpak

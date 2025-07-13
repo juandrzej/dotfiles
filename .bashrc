@@ -78,9 +78,10 @@ lazyg() {
 }
 
 # Setup fzf key bindings and fuzzy completion starship (command prompt) and zoxide (better cd)
-eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+eval "$(fzf --bash)"
+source ~/.config/fzf/tokyonight_storm.sh
 
 # If fastfetch installed, run it
 # if command -v fastfetch &> /dev/null; then

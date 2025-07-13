@@ -265,6 +265,7 @@ exec waybar
 exec swayidle -C ~/.config/swayidle/config
 # When brave is fullscreen, idle doesn't work <3
 for_window [class="Brave-browser"] inhibit_idle fullscreen
+for_window [class="Brave-browser" title=".*YouTube.*"] inhibit_idle
 
 # Auto-start applications on boot
 exec flatpak run com.protonvpn.www

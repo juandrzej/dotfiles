@@ -1,3 +1,5 @@
+[include]
+     	path = .tokyonight_storm.gitconfig
 [user]
 	name = juandrzej
 	email = programming.yippee729@passinbox.com
@@ -5,5 +7,14 @@
 	defaultBranch = main
 [core]
 	editor = nvim
+	pager = delta
 [pull]
 	rebase = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	dark = true
+	navigate = true
+    	line-numbers = true
+[merge]
+	conflictStyle = zdiff3
