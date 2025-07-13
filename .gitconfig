@@ -1,5 +1,5 @@
 [include]
-     	path = .tokyonight_storm.gitconfig
+     	path = 	~/.config/git/tokyonight_moon.gitconfig
 [user]
 	name = juandrzej
 	email = programming.yippee729@passinbox.com
