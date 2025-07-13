@@ -1,13 +1,10 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,
+    "height": 35,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/recorder", "idle_inhibitor", "tray", "pulseaudio", "temperature", "cpu", "memory", "custom/network"],
-    "sway/mode": {
-        "format": " {}"
-    },
+    "modules-right": ["idle_inhibitor", "tray", "pulseaudio", "temperature", "cpu", "memory", "custom/network"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -28,15 +25,19 @@
         }
     },
 
-    "tray": {
-        "icon-size": 20,
-        "spacing": 8
+    "sway/mode": {
+        "format": " {}"
     },
 
     "sway/window": {
         "max-length": 60,
         "tooltip": false
         // "format": "( {} )"
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 8
     },
 
     "clock": {
@@ -62,9 +63,6 @@
             "activated": "👁️",
             "deactivated": "😴"
         },
-        // "tooltip": true,
-        // "tooltip-format-activated": "Idle inhibitor active - preventing sleep/lock",
-        // "tooltip-format-deactivated": "Idle inhibitor inactive - sleep/lock enabled"
     },
 
     "custom/power": {
@@ -127,12 +125,6 @@
         "interval": 5,
         "format": "{icon} {temperatureC}°",
         "tooltip": false,
-        "format-icons": [
-            "", // Icon: temperature-empty
-            "", // Icon: temperature-quarter
-            "", // Icon: temperature-half
-            "", // Icon: temperature-three-quarters
-            ""  // Icon: temperature-full
-        ]
+        "format-icons": ["", "", "", "", ""]
     }
 }
