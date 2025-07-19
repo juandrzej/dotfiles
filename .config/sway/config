@@ -93,6 +93,7 @@ input "type:keyboard" {
 assign [class="Brave-browser"] workspace 2
 assign [class="obsidian"] workspace 3
 assign [app_id="ghostty"] workspace 4
+assign [class="Spotify"] workspace 6
 
 
 ### Key bindings
@@ -273,6 +274,7 @@ exec swaymsg 'workspace 1; exec alacritty'
 exec swaymsg 'workspace 7; exec alacritty'
 exec brave-browser
 exec flatpak run md.obsidian.Obsidian
+exec flatpak run com.spotify.Client
 
 # Start clipboard history daemon & bind keys
 exec clipboard-history daemon
