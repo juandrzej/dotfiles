@@ -12,16 +12,16 @@
         "disable-markup": false,
         "format": "{icon}",
         "format-icons": {
-            "1": "1 <span font='Font Awesome 5 Free 14'></span>",
-            "2": "2 <span font='Font Awesome 5 Free 14'></span>",
-            "3": "3 <span font='Font Awesome 5 Free 14'></span>",
-            "4": "4 <span font='Font Awesome 5 Free 14'></span>",
-            "5": "5 <span font='Font Awesome 5 Free 14'></span>",
-            "6": "6 <span font='Font Awesome 5 Free 14'></span>",
-            "7": "7 <span font='Font Awesome 5 Free 14'></span>",
-            "8": "8 <span font='Font Awesome 5 Free 14'></span>",
-            "9": "9 <span font='Font Awesome 5 Free 14'></span>",
-            "10": "0 <span font='Font Awesome 5 Free 14'></span>"
+            "1": "1 <span font='FontAwesome 14'></span>",
+            "2": "2 <span font='FontAwesome 14'></span>",
+            "3": "3 <span font='FontAwesome 14'></span>",
+            "4": "4 <span font='FontAwesome 14'></span>",
+            "5": "5 <span font='FontAwesome 14'></span>",
+            "6": "6 <span font='FontAwesome 14'></span>",
+            "7": "7 <span font='FontAwesome 14'></span>",
+            "8": "8 <span font='FontAwesome 14'></span>",
+            "9": "9 <span font='FontAwesome 14'></span>",
+            "10": "0 <span font='FontAwesome 14'></span>"
         }
     },
 
@@ -53,7 +53,7 @@
 
     "memory": {
         "interval": 15,
-        "format": "<span font='Font Awesome 5 Free 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
+        "format": "<span font='FontAwesome 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
         "tooltip": false
     },
 
@@ -90,10 +90,10 @@
 
     "network": {
         "format": "{icon}",
-        // "format-alt": "<span font='Font Awesome 5 Free 10'>󰩟</span> ︁{ipaddr}/{cidr} {icon}",
+        // "format-alt": "<span font='FontAwesome 10'>󰩟</span> ︁{ipaddr}/{cidr} {icon}",
         // "format-alt-click": "click-left",
-        "format-wifi": "<span font='Font Awesome 5 Free 10'></span> {essid} ({signalStrength}%)",
-        "format-ethernet": "<span font='Font Awesome 5 Free 10'>󰌗</span> {ifname}",
+        "format-wifi": "<span font='FontAwesome 10'></span> {essid} ({signalStrength}%)",
+        "format-ethernet": "<span font='FontAwesome 10'>󰌗</span> {ifname}",
         "format-disconnected": "⚠ Disconnected",
         "tooltip": false
     },
@@ -106,10 +106,10 @@
     },
 
     "pulseaudio": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
-        // "format-alt": "<span font='Font Awesome 5 Free 11'>{icon:2}</span>{volume}%",
+        "format": "<span font='FontAwesome 11'>{icon:2}</span>{volume}%",
+        // "format-alt": "<span font='FontAwesome 11'>{icon:2}</span>{volume}%",
         // "format-alt-click": "click-right",
-        "format-muted": "<span font='Font Awesome 5 Free 11'>󰖁</span>",
+        "format-muted": "<span font='FontAwesome 11'>󰖁</span>",
         "format-icons": {
             "phone": [" ", " ", " ", " "],
             "default": ["", "", "", ""]
