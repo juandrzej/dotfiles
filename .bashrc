@@ -77,11 +77,12 @@ lazyg() {
 	git push
 }
 
-# Setup fzf key bindings and fuzzy completion starship (command prompt) and zoxide (better cd)
+# Setup fzf key bindings and fuzzy completion starship (command prompt) and zoxide (better cd) and uv (for python)
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 source ~/.config/fzf/tokyonight_storm.sh
+eval "$(uv generate-shell-completion bash)"
 
 # If fastfetch installed, run it
 # if command -v fastfetch &> /dev/null; then

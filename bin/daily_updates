@@ -32,11 +32,17 @@ nvim_mason_updates() {
     nvim --headless "+MasonUpdate" +qa
 }
 
+uv_self_update() {
+    echo "Updating uv..."
+    uv self update
+}
+
 # Main execution
 flatpak_updates
 tmux_updates
 nvim_lazy_updates
 nvim_mason_updates
+uv_self_update
 
 echo ""
 echo "All updates completed successfully!"
