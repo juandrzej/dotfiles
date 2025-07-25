@@ -3,7 +3,7 @@
     "position": "top",
     "height": 35,
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "clock#US"],
     "modules-right": ["idle_inhibitor", "tray", "pulseaudio", "temperature", "cpu", "memory", "custom/network"],
 
     "sway/workspaces": {
@@ -30,9 +30,46 @@
     },
 
     "sway/window": {
-        "max-length": 60,
+        "max-length": 40,
         "tooltip": false
         // "format": "( {} )"
+    },
+
+
+    "clock": {
+        "format": "{:%a %d %b - %H:%M} ",
+        "tooltip-format": "<tt>{calendar}</tt>",
+	"calendar": {
+	    "mode-mon-col": 4,
+	    "weeks-pos": "left",
+	    "on-scroll": 1,
+	    "format": {
+	        "months":     "<span color='#7aa2f7'><b>{}</b></span>",
+            	"days":       "<span color='#c0caf5'><b>{}</b></span>",
+            	"weeks":      "<span color='#9ece6a'><b>W{:%W}</b></span>",
+            	"weekdays":   "<span color='#e0af68'><b>{}</b></span>",
+            	"today":      "<span color='#f7768e'><b><u>{}</u></b></span>"
+	      }
+	},
+	"actions":  {
+	    "on-click-right": "mode",
+	    "on-scroll-up": "shift_up",
+	    "on-scroll-down": "shift_down"
+	}
+    },
+
+    "clock#US": {
+        "tooltip": false,
+	"timezone": "America/New_York"
+    },
+
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "👁️",
+            "deactivated": "😴"
+        },
     },
 
     "tray": {
@@ -40,10 +77,6 @@
         "spacing": 8
     },
 
-    "clock": {
-        "format": "{:%a %d %b - %H:%M}",
-        "tooltip": false
-    },
 
     "cpu": {
         "interval": 5,
@@ -55,14 +88,6 @@
         "interval": 15,
         "format": "<span font='FontAwesome 9'>︁</span> {used:0.1f}G/{total:0.1f}G",
         "tooltip": false
-    },
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "👁️",
-            "deactivated": "😴"
-        },
     },
 
     "custom/power": {
