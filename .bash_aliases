@@ -10,9 +10,12 @@ alias lla='lsd -lA'
 alias lr='lsd -lR' # recursive
 alias lf='lsd -l | egrep -v "^d"'  # files only
 alias ldir='lsd -l | egrep "^d"'   # directories only
-
 alias atree='lsd --tree --all --ignore-glob .git --ignore-glob __pycache__'
-alias bat='batcat'
+
+# for debian due to diff package name
+if command -v batcat > /dev/null 2>&1; then
+    alias bat='batcat'
+fi
 
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
