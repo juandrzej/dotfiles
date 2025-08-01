@@ -11,4 +11,55 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
-require('lazy').setup 'plugins'
+-- require('lazy').setup 'plugins'
+require('lazy').setup({
+
+  -- Core functionality
+  require 'plugins.gitsigns',
+  require 'plugins.treesitter', -- done
+  require 'plugins.lazydev', -- done
+  require 'plugins.lspconfig', -- done
+  require 'plugins.blink',
+  require 'plugins.lint', -- done
+  require 'plugins.conform', -- done
+
+  -- Navigation & UI
+  require 'plugins.telescope',
+  require 'plugins.which-key',
+  require 'plugins.tokyonight', -- done
+  require 'plugins.nvim-tmux-navigation',
+  require 'plugins.oil', -- done
+  require 'plugins.neo-tree',
+
+  -- Text editing
+  require 'plugins.guess-indent', -- done
+  require 'plugins.autopairs', -- done
+  require 'plugins.todo-comments', -- done
+  require 'plugins.mini',
+  -- require 'plugins.surround',
+
+  -- Focus & productivity DONE
+  require 'plugins.zen-mode',
+  require 'plugins.twilight',
+  require 'plugins.hardtime',
+  require 'plugins.vim-be-good',
+}, {
+
+  ui = { -- fallback icons in abscense of nerd font
+    icons = vim.g.have_nerd_font and {} or {
+      cmd = '⌘',
+      config = '🛠',
+      event = '📅',
+      ft = '📂',
+      init = '⚙',
+      keys = '🗝',
+      plugin = '🔌',
+      runtime = '💻',
+      require = '🌙',
+      source = '📄',
+      start = '🚀',
+      task = '📌',
+      lazy = '💤 ',
+    },
+  },
+})
