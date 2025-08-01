@@ -248,17 +248,18 @@ return {
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       -- linters
-      'vale',
-      'markdownlint',
-      'jsonlint',
+      -- 'vale',
+      -- 'markdownlint',
+      -- 'jsonlint',
       'yamllint',
       'hadolint',
-      'shellcheck',
-      'selene',
+      -- 'shellcheck',
+      -- 'selene',
       'ruff',
       'mypy',
-      'stylelint',
-      'htmlhint',
+      -- 'stylelint',
+      -- 'htmlhint',
+
       -- formatters
       'stylua',
       'lua_ls',

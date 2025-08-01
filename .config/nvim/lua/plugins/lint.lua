@@ -3,24 +3,24 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
     local lint = require 'lint'
-    lint.linters_by_ft = {
+    lint.linters_by_ft = { -- most are commented out because LSPs are better honestly
 
       -- general
-      text = { 'vale' },
-      markdown = { 'vale', 'markdownlint' },
-      json = { 'jsonlint' },
+      -- text = { 'vale' },
+      -- markdown = { 'markdownlint' },
+      -- json = { 'jsonlint' },
       yaml = { 'yamllint' },
       dockerfile = { 'hadolint' },
 
       -- shell
-      sh = { 'shellcheck' },
-      bash = { 'shellcheck' },
+      -- sh = { 'shellcheck' },
+      -- bash = { 'shellcheck' },
 
       -- languages
-      lua = { 'selene' },
+      -- lua = { 'selene' },
       python = { 'ruff', 'mypy' },
-      css = { 'stylelint' },
-      html = { 'htmlhint' },
+      -- css = { 'stylelint' },
+      -- html = { 'htmlhint' },
     }
 
     -- Create autocommand which carries out the actual linting
