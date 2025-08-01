@@ -11,6 +11,8 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
+-- TODO: lua line? render markdown? comment? avante?
+--
 -- require('lazy').setup 'plugins'
 require('lazy').setup({
 
@@ -22,6 +24,7 @@ require('lazy').setup({
   require 'plugins.blink',
   require 'plugins.lint', -- done
   require 'plugins.conform', -- done
+  -- require 'plugins.debug',
 
   -- Navigation & UI
   require 'plugins.telescope',
