@@ -37,8 +37,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
 -- Actually mine mine :D
-vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = '[W]rite to file' })
-vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = '[Q]uit' })
-vim.keymap.set('n', '<leader>zz', '<cmd>ZenMode<CR>', { desc = 'Toggle [Z]en Mode' })
-vim.keymap.set('n', '<leader>zt', '<cmd>Twilight<CR>', { desc = 'Toggle [T]wilight' })
--- vim.keymap.set('n', '<leader>h', ':Hardtime toggle<CR>', { desc = '[H]ardtime toggle' })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = '[W]rite to file' })
+vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = '[Q]uit' })
+vim.keymap.set('n', '<leader>tz', '<cmd>ZenMode<CR>', { desc = '[T]oggle [Z]en Mode' })
+vim.keymap.set('n', '<leader>tt', '<cmd>Twilight<CR>', { desc = '[T]oggle [T]wilight' })
+vim.keymap.set('n', '<leader>td', '<cmd>Hardtime toggle<CR>', { desc = '[T]oggle Har[d]time' })
+vim.keymap.set('n', '<leader>tv', '<cmd>VimBeGood<CR>', { desc = '[T]oggle [V]imBeGood' })
