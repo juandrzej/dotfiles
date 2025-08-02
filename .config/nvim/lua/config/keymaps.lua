@@ -39,5 +39,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Actually mine mine :D
 vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = '[W]rite to file' })
 vim.keymap.set('n', '<leader>q', ':q<CR>', { desc = '[Q]uit' })
-vim.keymap.set('n', '<leader>z', ':ZenMode<CR>', { desc = 'Enter [Z]en Mode with Twilight' })
+vim.keymap.set('n', '<leader>zz', '<cmd>ZenMode<CR>', { desc = 'Toggle [Z]en Mode' })
+vim.keymap.set('n', '<leader>zt', '<cmd>Twilight<CR>', { desc = 'Toggle [T]wilight' })
 -- vim.keymap.set('n', '<leader>h', ':Hardtime toggle<CR>', { desc = '[H]ardtime toggle' })

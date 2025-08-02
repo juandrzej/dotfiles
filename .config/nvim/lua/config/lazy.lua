@@ -32,7 +32,7 @@ require('lazy').setup({
   require 'plugins.tokyonight', -- done
   require 'plugins.nvim-tmux-navigation',
   require 'plugins.oil', -- done
-  require 'plugins.neo-tree',
+  -- require 'plugins.neo-tree',
   require 'plugins.lualine',
 
   -- Text editing
@@ -44,7 +44,6 @@ require('lazy').setup({
 
   -- Focus & productivity DONE
   require 'plugins.zen-mode',
-  require 'plugins.twilight',
   require 'plugins.hardtime',
   require 'plugins.vim-be-good',
 }, {

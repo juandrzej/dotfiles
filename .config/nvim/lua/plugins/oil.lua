@@ -1,6 +1,7 @@
 return {
   'stevearc/oil.nvim',
-  dependencies = { 'echasnovski/mini.icons' },
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  event = 'VeryLazy',
   config = function()
     require('oil').setup {
       columns = { 'permissions', 'icon' },
