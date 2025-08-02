@@ -33,6 +33,7 @@ require('lazy').setup({
   require 'plugins.nvim-tmux-navigation',
   require 'plugins.oil', -- done
   require 'plugins.neo-tree',
+  require 'plugins.lualine',
 
   -- Text editing
   require 'plugins.guess-indent', -- done
