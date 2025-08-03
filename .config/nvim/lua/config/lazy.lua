@@ -30,7 +30,7 @@ require('lazy').setup({
   require 'plugins.telescope',
   require 'plugins.which-key',
   require 'plugins.tokyonight', -- done
-  require 'plugins.nvim-tmux-navigation',
+  require 'plugins.vim-tmux-navigator',
   require 'plugins.oil', -- done
   -- require 'plugins.neo-tree',
   require 'plugins.lualine',
@@ -64,5 +64,8 @@ require('lazy').setup({
       task = '📌',
       lazy = '💤 ',
     },
+  },
+  rocks = {
+    enabled = false, -- disable luarocks completely
   },
 })
