@@ -27,13 +27,13 @@ require('lazy').setup({
   -- require 'plugins.debug',
 
   -- Navigation & UI
+  require 'plugins.tokyonight', -- done
+  require 'plugins.lualine', -- done
   require 'plugins.telescope',
   require 'plugins.which-key',
-  require 'plugins.tokyonight', -- done
-  require 'plugins.vim-tmux-navigator',
+  require 'plugins.vim-tmux-navigator', -- done
   require 'plugins.oil', -- done
   -- require 'plugins.neo-tree',
-  require 'plugins.lualine',
 
   -- Text editing
   require 'plugins.guess-indent', -- done
