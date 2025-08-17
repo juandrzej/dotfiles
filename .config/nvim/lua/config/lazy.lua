@@ -35,12 +35,12 @@ require('lazy').setup({
   require 'plugins.oil', -- done
   -- require 'plugins.neo-tree',
 
-  -- Text editing
-  require 'plugins.guess-indent', -- done
-  require 'plugins.autopairs', -- done
-  require 'plugins.todo-comments', -- done
+  -- Text editing DONE
+  require 'plugins.guess-indent',
+  require 'plugins.autopairs',
+  require 'plugins.todo-comments',
   require 'plugins.mini',
-  -- require 'plugins.surround',
+  require 'plugins.surround',
 
   -- Focus & productivity DONE
   require 'plugins.zen-mode',
