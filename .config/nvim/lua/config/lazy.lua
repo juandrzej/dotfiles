@@ -32,6 +32,7 @@ require('lazy').setup({
   require 'plugins.telescope',
   require 'plugins.which-key',
   require 'plugins.vim-tmux-navigator', -- done
+  require 'plugins.vim-obsession', --done
   require 'plugins.oil', -- done
   -- require 'plugins.neo-tree',
 
