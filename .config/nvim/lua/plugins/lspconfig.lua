@@ -190,7 +190,17 @@ return {
       },
 
       -- languages
-      pyright = {},
+      pyright = {
+        settings = {
+          python = {
+            -- commenout out temp if use python3 (couldnt find better solution for now)
+            -- pythonPath = '.venv/bin/python',
+            analysis = {
+              extraPaths = { 'src' },
+            },
+          },
+        },
+      },
       -- gopls = {},
       -- rust_analyzer = {},
 

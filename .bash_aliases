@@ -43,9 +43,13 @@ alias godaddy='systemctl suspend-then-hibernate'
 alias papi='sudo shutdown now'
 alias phoenix='sudo reboot'
 
+# Git aliases
+alias gitlog='git log --oneline --decorate --graph --parents'
+alias dif='git diff'
+alias status='git status'
+
 alias reload='source ~/.bashrc'
 alias nala-up='sudo nala update && sudo nala upgrade'
-alias gitlog='git log --oneline --decorate --graph --parents'
 alias docker-clear-containers='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
 alias nf='file=$(find . -type f -not -path "*/node_modules/*" -not -path "*/__pycache__/*" -not -path "*/.git/*" | fzf --height 40% --layout=reverse --border --preview "head -50 {}") && nvim "$file"'
 alias ktmux='tmux kill-server'

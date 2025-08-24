@@ -43,3 +43,7 @@ vim.keymap.set('n', '<leader>tz', '<cmd>ZenMode<CR>', { desc = '[T]oggle [Z]en M
 vim.keymap.set('n', '<leader>tt', '<cmd>Twilight<CR>', { desc = '[T]oggle [T]wilight' })
 vim.keymap.set('n', '<leader>td', '<cmd>Hardtime toggle<CR>', { desc = '[T]oggle Har[d]time' })
 vim.keymap.set('n', '<leader>tv', '<cmd>VimBeGood<CR>', { desc = '[T]oggle [V]imBeGood' })
+
+-- Add blank line below/above without insert mode
+vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'Add blank line below' })
+vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'Add blank line above' })
