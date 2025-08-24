@@ -1,3 +1,6 @@
+[env]
+TERM = "alacritty"
+
 [general]
 import = ["~/.config/alacritty/tokyonight_storm.toml",]
 
