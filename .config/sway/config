@@ -272,7 +272,7 @@ for_window [class="Brave-browser" title=".*YouTube.*"] inhibit_idle
 exec flatpak run com.protonvpn.www
 exec swaymsg 'workspace 1; exec alacritty'
 exec swaymsg 'workspace 4; exec alacritty --working-directory /home/juandrzej/Code'
-exec swaymsg 'workspace 7; exec alacritty --working-directory /home/juandrzej/Videos -e ranger'
+exec swaymsg 'workspace 7; exec alacritty --working-directory /home/juandrzej/Videos'
 exec brave-browser
 exec flatpak run md.obsidian.Obsidian
 exec flatpak run com.spotify.Client
