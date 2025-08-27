@@ -15,6 +15,11 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open [d]ia
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+-- Quick window navigation from terminal
+vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { desc = 'Terminal: Go to left window' })
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j', { desc = 'Terminal: Go to bottom window' })
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k', { desc = 'Terminal: Go to top window' })
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l', { desc = 'Terminal: Go to right window' })
 
 -- Disable arrow keys in normal mode
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -42,7 +47,9 @@ vim.keymap.set('n', '<leader>q', '<cmd>q<CR>', { desc = '[Q]uit' })
 vim.keymap.set('n', '<leader>tz', '<cmd>ZenMode<CR>', { desc = '[T]oggle [Z]en Mode' })
 vim.keymap.set('n', '<leader>tt', '<cmd>Twilight<CR>', { desc = '[T]oggle [T]wilight' })
 vim.keymap.set('n', '<leader>td', '<cmd>Hardtime toggle<CR>', { desc = '[T]oggle Har[d]time' })
-vim.keymap.set('n', '<leader>tv', '<cmd>VimBeGood<CR>', { desc = '[T]oggle [V]imBeGood' })
+vim.keymap.set('n', '<leader>tg', '<cmd>VimBeGood<CR>', { desc = '[T]oggle VimBe[G]ood' })
+vim.keymap.set('n', '<leader>th', ':split | terminal<CR>', { desc = '[T]erminal [h]orizontal' })
+vim.keymap.set('n', '<leader>tv', ':vsplit | terminal<CR>', { desc = '[T]erminal [v]ertical' })
 
 -- Add blank line below/above without insert mode
 vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'Add blank line below' })
