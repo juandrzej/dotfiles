@@ -17,7 +17,7 @@ rtp:prepend(lazypath)
 require('lazy').setup({
 
   -- Core functionality
-  require 'plugins.gitsigns',
+  require 'plugins.gitsigns', -- done
   require 'plugins.treesitter', -- done
   require 'plugins.lazydev', -- done
   require 'plugins.lspconfig', -- done
