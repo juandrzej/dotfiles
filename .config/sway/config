@@ -29,7 +29,7 @@ set $menu wofi --show drun
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg /home/juandrzej/Pictures/wave.jpg fill
+output * bg /home/juandrzej/Pictures/pinkpanda.png fill
 
 
 ### Input configuration
