@@ -31,7 +31,7 @@ require('lazy').setup({
   require 'plugins.lualine', -- done
   require 'plugins.telescope',
   require 'plugins.harpoon', -- done
-  require 'plugins.which-key',
+  require 'plugins.which-key', -- done
   require 'plugins.vim-tmux-navigator', -- done
   require 'plugins.vim-obsession', --done
   require 'plugins.oil', -- done
