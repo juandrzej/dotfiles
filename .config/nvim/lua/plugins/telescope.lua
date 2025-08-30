@@ -29,6 +29,10 @@ return {
         file_ignore_patterns = {
           '%.git/',
           'node_modules/',
+          '%.DS_Store',
+          '%.cache/',
+          '__pycache__/',
+          '%.pytest_cache/',
         },
         hidden = true,
       },

@@ -11,7 +11,7 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
--- TODO: render markdown? comment? avante? harpoon?
+-- TODO: render markdown? comment? avante?
 --
 -- require('lazy').setup 'plugins'
 require('lazy').setup({
@@ -30,6 +30,7 @@ require('lazy').setup({
   require 'plugins.tokyonight', -- done
   require 'plugins.lualine', -- done
   require 'plugins.telescope',
+  require 'plugins.harpoon', -- done
   require 'plugins.which-key',
   require 'plugins.vim-tmux-navigator', -- done
   require 'plugins.vim-obsession', --done
