@@ -9,6 +9,10 @@ return {
   {
     'folke/twilight.nvim',
     lazy = true, -- only loads as dependency of zen-mode
-    opts = {},
+    opts = {
+      dimming = {
+        alpha = 0.7, -- Less dimming (0.7 instead of default 0.25)
+      },
+    },
   },
 }
