@@ -1,4 +1,5 @@
 .git
+.gitignore
 logs
 README.md
 LICENSE

@@ -17,34 +17,34 @@ rtp:prepend(lazypath)
 require('lazy').setup({
 
   -- Core functionality
-  require 'plugins.gitsigns', -- done
-  require 'plugins.treesitter', -- done
-  require 'plugins.lazydev', -- done
-  require 'plugins.lspconfig', -- done
-  require 'plugins.blink',
-  require 'plugins.lint', -- done
-  require 'plugins.conform', -- done
+  require 'plugins.gitsigns',
+  require 'plugins.treesitter',
+  require 'plugins.lazydev',
+  require 'plugins.lspconfig',
+  require 'plugins.blink', -- to be cleaned
+  require 'plugins.lint',
+  require 'plugins.conform',
   -- require 'plugins.debug',
 
   -- Navigation & UI
-  require 'plugins.tokyonight', -- done
-  require 'plugins.lualine', -- done
+  require 'plugins.tokyonight',
+  require 'plugins.lualine',
   require 'plugins.telescope',
-  require 'plugins.harpoon', -- done
-  require 'plugins.which-key', -- done
-  require 'plugins.vim-tmux-navigator', -- done
-  require 'plugins.vim-obsession', --done
-  require 'plugins.oil', -- done
+  require 'plugins.harpoon',
+  require 'plugins.which-key',
+  require 'plugins.vim-tmux-navigator',
+  require 'plugins.vim-obsession',
+  require 'plugins.oil',
   -- require 'plugins.neo-tree',
 
-  -- Text editing DONE
+  -- Text editing
   require 'plugins.guess-indent',
   require 'plugins.autopairs',
   require 'plugins.todo-comments',
   require 'plugins.mini',
   require 'plugins.surround',
 
-  -- Focus & productivity DONE
+  -- Focus & productivity
   require 'plugins.zen-mode',
   require 'plugins.hardtime',
   require 'plugins.vim-be-good',
