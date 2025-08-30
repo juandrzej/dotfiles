@@ -15,8 +15,6 @@ return {
   },
 
   config = function()
-    -- [[ Configure Telescope ]]
-    -- See `:help telescope` and `:help telescope.setup()`
     require('telescope').setup {
       defaults = {
         file_ignore_patterns = {
@@ -31,10 +29,7 @@ return {
       },
       pickers = {
         find_files = {
-          hidden = true,
-          -- Also search in .gitignore files
-          no_ignore = false,
-          -- Show .git directory contents
+          no_ignore = false, -- for .gitignore
           follow = true,
         },
       },
@@ -64,14 +59,11 @@ return {
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
-      -- You can pass additional configuration to Telescope to change the theme, layout, etc.
       builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
         previewer = false,
       })
     end, { desc = '[/] Fuzzily search in current buffer' })
-
-    -- It's also possible to pass additional configuration options.
     --  See `:help telescope.builtin.live_grep()` for information about particular keys
     vim.keymap.set('n', '<leader>s/', function()
       builtin.live_grep {
