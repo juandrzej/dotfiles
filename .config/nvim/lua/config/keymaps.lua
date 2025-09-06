@@ -1,5 +1,4 @@
 -- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
 
 -- General keymaps
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Write to file' })
@@ -25,6 +24,7 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open [d]ia
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
 -- Quick window navigation from terminal
 vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { desc = 'Terminal: Go to left window' })
 vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j', { desc = 'Terminal: Go to bottom window' })
