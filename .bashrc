@@ -80,7 +80,7 @@ lazyg() {
 	git push
 }
 
-# Setup fzf key bindings and fuzzy completion starship (command prompt) and zoxide (better cd) and uv (for python)
+# Setup starship (command prompt), zoxide (better cd), fzf key bindings with fuzzy completion and fzf colorscheme, uv (for python)
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
@@ -91,3 +91,6 @@ eval "$(uv generate-shell-completion bash)"
 # if command -v fastfetch &> /dev/null; then
 #     fastfetch
 # fi
+
+# added temp for boot.dev
+export PATH=$PATH:$HOME/go/bin
