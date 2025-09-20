@@ -1,6 +1,7 @@
 .git
 .gitignore
 setup/
+docs/
 README.md
 LICENSE
 Session.vim
