@@ -2,8 +2,11 @@
 
 source /etc/os-release
 case $ID in
-debian) echo "debian" ;;
+debian)
+	sudo apt update && sudo apt upgrade -y
+	sudo apt install -y git ansible
+	;;
 fedora) echo "fedora" ;;
 arch) echo "arch" ;;
-*) echo "This distribution is not setup" ;;
+*) echo "This distribution is not set up" ;;
 esac
