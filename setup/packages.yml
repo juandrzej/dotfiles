@@ -1,0 +1,52 @@
+---
+packages:
+  # neovim requirements
+  - make
+  - gcc
+  - ripgrep
+  - zip
+  - unzip
+  - xclip
+  # most importants
+  - vim
+  - neovim
+  - tmux
+  - alacritty
+  # QOL
+  - fzf
+  - zoxide
+  - starship
+  - fastfetch
+  - stow
+  - ranger
+  - mpv
+  - lsd
+  - fd-find
+  - ncdu
+  - procs
+  - du-dust
+  - bat
+  - duf
+  - tealdeer
+  - sd
+  - btop
+  - git-delta
+  # additions
+  - trash-cli
+  - bash-completion
+  - ffmpeg
+  - file
+  - ufw
+  - keyd
+  - gh
+  - flatpak
+  - libreoffice
+  - grub-customizer
+  - gparted
+  - nodejs
+  - npm
+  - python3
+  - python3-pip
+  - python3-venv
+  - ibus
+  - ibus-pinyin

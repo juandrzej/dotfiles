@@ -19,4 +19,4 @@ esac
 
 # git clone git@github.com:juandrzej/dotfiles.git ~/.dotfiles
 # cd ~/.dotfiles/setup
-# ansible-playbook install-packages.yml --ask-become-pass
+# ansible-playbook install_packages.yml --ask-become-pass

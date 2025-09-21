@@ -1,0 +1,11 @@
+---
+- name: Install packages
+  hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Debian installations
+      ansible.builtin.apt:
+        name: vim
+        state: present
