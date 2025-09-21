@@ -1,5 +1,5 @@
 ---
-packages:
+common_packages:
   # neovim requirements
   - make
   - gcc
@@ -18,10 +18,8 @@ packages:
   - starship
   - fastfetch
   - stow
-  - ranger
   - mpv
   - lsd
-  - fd-find
   - ncdu
   - procs
   - du-dust
@@ -45,8 +43,18 @@ packages:
   - gparted
   - nodejs
   - npm
-  - python3
-  - python3-pip
-  - python3-venv
   - ibus
   - ibus-pinyin
+
+specific_packages:
+  Debian:
+    - python3
+    - python3-pip
+    - python3-venv
+    - ranger
+    - fd-find
+
+  Archlinux:
+    - yazi
+    - fd
+    - ghostty

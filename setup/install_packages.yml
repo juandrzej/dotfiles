@@ -8,7 +8,12 @@
     - group_vars/packages.yml
 
   tasks:
-    - name: Install packages
+    - name: Install common packages across all distros
       ansible.builtin.package:
-        name: "{{ packages }}"
+        name: "{{ common_packages }}"
+        state: present
+
+    - name: Install distro specific packages
+      ansible.builtin.package:
+        name: "{{ specific_packages[ansible_os_family] }}"
         state: present
