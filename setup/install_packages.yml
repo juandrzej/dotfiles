@@ -4,8 +4,11 @@
   connection: local
   become: true
 
+  vars_files:
+    - group_vars/packages.yml
+
   tasks:
-    - name: Debian installations
-      ansible.builtin.apt:
-        name: vim
+    - name: Install packages
+      ansible.builtin.package:
+        name: "{{ packages }}"
         state: present
