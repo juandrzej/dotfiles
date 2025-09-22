@@ -58,3 +58,6 @@ specific_packages:
     - yazi
     - fd
     - ghostty
+
+  RedHat:
+    - fd
