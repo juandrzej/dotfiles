@@ -7,3 +7,5 @@ archived_packages:
   - gh
   - python3-pip
   - python3-venv
+  - grub-customizer
+  - gparted
