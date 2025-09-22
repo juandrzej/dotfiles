@@ -6,7 +6,6 @@ common_packages:
   - ripgrep
   - zip
   - unzip
-  - xclip
   # most importants
   - vim
   - neovim
@@ -22,7 +21,6 @@ common_packages:
   - lsd
   - ncdu
   - procs
-  - du-dust
   - bat
   - duf
   - tealdeer
@@ -36,28 +34,33 @@ common_packages:
   - file
   - ufw
   - keyd
-  - gh
   - flatpak
-  - libreoffice
-  - grub-customizer
-  - gparted
-  - nodejs
-  - npm
-  - ibus
-  - ibus-pinyin
 
 specific_packages:
   Debian:
-    - python3
-    - python3-pip
-    - python3-venv
+    - xclip
+    - du-dust
     - ranger
     - fd-find
+    - libreoffice
+    - python3
 
   Archlinux:
+    - dust
     - yazi
     - fd
+    - libreoffice-still
+    - python
+    - uv
     - ghostty
 
   RedHat:
-    - fd
+    - du-dust
+    - ranger
+    - fd-find
+    - libreoffice
+    - python3
+    - uv
+    - ffmpeg-free
+    # no keyd regularly on fedora, google how to dl
+    # no starship on fedora dnf??

@@ -1,0 +1,9 @@
+---
+archived_packages:
+  - ibus
+  - ibus-pinyin
+  - nodejs
+  - npm
+  - gh
+  - python3-pip
+  - python3-venv
