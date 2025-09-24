@@ -1,5 +1,17 @@
-sway waybar wofi mako-notifier swaybg
-swayidle swaylock
-grim slurp wl-clipboard pcmanfm
-pulseaudio-utils
-swayimg
+---
+sway_packages:
+  - sway
+  - waybar
+  - wofi
+  - mako
+  # - mako-notifier
+  # - swaybg not sure if this is needed
+  - swayidle
+  - swaylock
+  - grim
+  - slurp
+  - wl-clipboard
+  - pcmanfm
+  # - pulseaudio-utils
+  - pipewire
+  - swayimg

@@ -9,3 +9,5 @@ archived_packages:
   - python3-venv
   - grub-customizer
   - gparted
+  - pulseaudio-utils
+  - swaybg

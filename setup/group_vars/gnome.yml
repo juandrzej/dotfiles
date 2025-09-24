@@ -1,4 +1,14 @@
-gnome-shell gnome-control-center gnome-session gdm3
-gnome-menus gnome-keyring nautilus adwaita-icon-theme
-gnome-settings-daemon gnome-system-monitor glib-networking
-network-manager-gnome gnome-tweaks
+---
+gnome_packages:
+  - gnome-shell
+  - gnome-control-center
+  - gnome-session gdm3
+  - gnome-menus
+  - gnome-keyring
+  - nautilus
+  - adwaita-icon-theme
+  - gnome-settings-daemon
+  - gnome-system-monitor
+  - glib-networking
+  - network-manager-gnome
+  - gnome-tweaks
