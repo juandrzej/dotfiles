@@ -2,7 +2,9 @@
 gnome_packages:
   - gnome-shell
   - gnome-control-center
-  - gnome-session gdm3
+  - gnome-session
+  - gdm
+  # - gdm4
   - gnome-menus
   - gnome-keyring
   - nautilus
@@ -10,5 +12,6 @@ gnome_packages:
   - gnome-settings-daemon
   - gnome-system-monitor
   - glib-networking
-  - network-manager-gnome
+  - networkmanager
+  # - network-manager-gnome
   - gnome-tweaks

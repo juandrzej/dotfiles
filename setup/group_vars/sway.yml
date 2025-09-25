@@ -5,13 +5,11 @@ sway_packages:
   - wofi
   - mako
   # - mako-notifier
-  # - swaybg not sure if this is needed
   - swayidle
   - swaylock
   - grim
   - slurp
   - wl-clipboard
   - pcmanfm
-  # - pulseaudio-utils
   - pipewire
   - swayimg
