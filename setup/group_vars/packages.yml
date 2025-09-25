@@ -7,7 +7,6 @@ common_packages:
   - zip
   - unzip
   # most importants
-  - vim
   - neovim
   - tmux
   - alacritty
@@ -23,7 +22,6 @@ common_packages:
   - bat
   - duf
   - tealdeer
-  - sd
   - btop
   - git-delta
   # additions
@@ -35,8 +33,10 @@ common_packages:
 
 specific_packages:
   Debian:
+    - vim
     - xclip
     - starship
+    - sd
     - du-dust
     - ranger
     - fd-find
@@ -46,7 +46,9 @@ specific_packages:
     - python3
 
   Archlinux:
+    - vim
     - starship
+    - sd
     - dust
     - yazi
     - fd
@@ -58,6 +60,7 @@ specific_packages:
     - ghostty
 
   RedHat:
+    - vim-enhanced
     - du-dust
     - ranger
     - fd-find
