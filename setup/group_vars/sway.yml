@@ -1,15 +1,43 @@
 ---
 sway_packages:
-  - sway
-  - waybar
-  - wofi
-  - mako
-  # - mako-notifier
-  - swayidle
-  - swaylock
-  - grim
-  - slurp
-  - wl-clipboard
-  - pcmanfm
-  - pipewire
-  - swayimg
+  Debian:
+    - sway
+    - waybar
+    - wofi
+    - mako-notifier
+    - swayidle
+    - swaylock
+    - grim
+    - slurp
+    - wl-clipboard
+    - pcmanfm
+    - pipewire
+    - swayimg
+
+  Archlinux:
+    - sway
+    - waybar
+    - wofi
+    - mako
+    - swayidle
+    - swaylock
+    - grim
+    - slurp
+    - wl-clipboard
+    - pcmanfm
+    - pipewire
+    - swayimg
+
+  RedHat:
+    - sway
+    - waybar
+    - wofi
+    - mako
+    - swayidle
+    - swaylock
+    - grim
+    - slurp
+    - wl-clipboard
+    - pcmanfm
+    - pipewire
+    - swayimg

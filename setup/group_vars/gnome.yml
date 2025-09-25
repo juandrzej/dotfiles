@@ -1,17 +1,46 @@
 ---
 gnome_packages:
-  - gnome-shell
-  - gnome-control-center
-  - gnome-session
-  - gdm
-  # - gdm4
-  - gnome-menus
-  - gnome-keyring
-  - nautilus
-  - adwaita-icon-theme
-  - gnome-settings-daemon
-  - gnome-system-monitor
-  - glib-networking
-  - networkmanager
-  # - network-manager-gnome
-  - gnome-tweaks
+  Debian:
+    - gnome-shell
+    - gnome-control-center
+    - gnome-session
+    - gdm3
+    - gnome-menus
+    - gnome-keyring
+    - nautilus
+    - adwaita-icon-theme
+    - gnome-settings-daemon
+    - gnome-system-monitor
+    - glib-networking
+    - network-manager-gnome
+    - gnome-tweaks
+
+  Archlinux:
+    - gnome-shell
+    - gnome-control-center
+    - gnome-session
+    - gdm
+    - gnome-menus
+    - gnome-keyring
+    - nautilus
+    - adwaita-icon-theme
+    - gnome-settings-daemon
+    - gnome-system-monitor
+    - glib-networking
+    - networkmanager
+    - gnome-tweaks
+
+  RedHat:
+    - gnome-shell
+    - gnome-control-center
+    - gnome-session
+    - gdm
+    - gnome-menus
+    - gnome-keyring
+    - nautilus
+    - adwaita-icon-theme
+    - gnome-settings-daemon
+    - gnome-system-monitor
+    - glib-networking
+    - networkmanager
+    - gnome-tweaks

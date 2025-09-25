@@ -6,6 +6,7 @@
 
   vars_files:
     - group_vars/packages.yml
+    - group_vars/sway.yml
 
   tasks:
     - name: Install common packages across all distros
@@ -16,4 +17,9 @@
     - name: Install distro specific packages
       ansible.builtin.package:
         name: "{{ specific_packages[ansible_os_family] }}"
+        state: present
+
+    - name: Install sway packages
+      ansible.builtin.package:
+        name: "{{ sway_packages[ansible_os_family] }}"
         state: present
