@@ -14,7 +14,6 @@ common_packages:
   # QOL
   - fzf
   - zoxide
-  - starship
   - fastfetch
   - stow
   - mpv
@@ -30,25 +29,29 @@ common_packages:
   # additions
   - trash-cli
   - bash-completion
-  - ffmpeg
   - file
   - ufw
-  - keyd
   - flatpak
 
 specific_packages:
   Debian:
     - xclip
+    - starship
     - du-dust
     - ranger
     - fd-find
+    - ffmpeg
+    - keyd
     - libreoffice
     - python3
 
   Archlinux:
+    - starship
     - dust
     - yazi
     - fd
+    - ffmpeg
+    - keyd
     - libreoffice-still
     - python
     - uv
