@@ -257,6 +257,8 @@ bindsym Print exec grim ~/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M
 bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M:%S).png
 # Screenshot to clipboard
 bindsym Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
+# Screensharing setup line
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 ### Autostart
 exec mako
@@ -282,5 +284,3 @@ bindsym $mod+Ctrl+v exec ~/bin/clipboard-history clipboard
 
 # Return to workspace 1 after startup
 exec swaymsg 'workspace 1'
-
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
