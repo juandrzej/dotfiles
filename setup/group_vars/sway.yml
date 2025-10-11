@@ -12,6 +12,10 @@ sway_packages:
     - wl-clipboard
     - pcmanfm
     - pipewire
+    - pipewire-pulse
+    - wireplumber
+    - xdg-desktop-portal
+    - xdg-desktop-portal-wlr
     - swayimg
 
   Archlinux:
@@ -26,6 +30,12 @@ sway_packages:
     - wl-clipboard
     - pcmanfm
     - pipewire
+    - pipewire-pulse
+    - pipewire-audio
+    - pipewire-alsa
+    - wireplumber
+    - xdg-desktop-portal
+    - xdg-desktop-portal-wlr
     - swayimg
 
   RedHat:
@@ -40,4 +50,8 @@ sway_packages:
     - wl-clipboard
     - pcmanfm
     - pipewire
+    - pipewire-pulseaudio
+    - wireplumber
+    - xdg-desktop-portal
+    - xdg-desktop-portal-wlr
     - swayimg
