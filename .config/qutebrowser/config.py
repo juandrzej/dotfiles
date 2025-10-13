@@ -1,4 +1,5 @@
 # General settings
+config.load_autoconfig(False)
 c.auto_save.session = True
 c.statusbar.position = "bottom"
 c.statusbar.show = "always"
