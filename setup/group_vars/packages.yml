@@ -46,6 +46,8 @@ specific_packages:
     - libreoffice
     - python3
     - gh
+    - openssh
+    - qutebrowser
 
   Archlinux:
     - vim
@@ -62,6 +64,8 @@ specific_packages:
     - github-cli
     - ncspot
     - obsidian
+    - jq
+    - ncspot
 
   RedHat:
     - vim-enhanced

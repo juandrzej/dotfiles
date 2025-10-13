@@ -21,25 +21,26 @@ sway_packages:
 
   Archlinux:
     - sway
+    - swaybg
     - waybar
     - wofi
     - mako
     - swayidle
     - swaylock
+    - swayimg
     - grim
     - slurp
     - wl-clipboard
-    - pcmanfm
     - pipewire
     - pipewire-pulse
     - pipewire-audio
     - pipewire-alsa
     - wireplumber
+    - pavucontrol
+    - pcmanfm
     - xdg-desktop-portal
     - xdg-desktop-portal-wlr
     - xdg-desktop-portal-gtk
-    - swayimg
-    - swaybg
     - xorg-xwayland
 
   RedHat:
