@@ -67,8 +67,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "👁️",
-            "deactivated": "😴"
+            "activated": "idle_on",
+            "deactivated": "idle_off"
         },
     },
 

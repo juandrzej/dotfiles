@@ -17,6 +17,7 @@ sway_packages:
     - xdg-desktop-portal
     - xdg-desktop-portal-wlr
     - swayimg
+    - swaybg
 
   Archlinux:
     - sway
@@ -37,6 +38,7 @@ sway_packages:
     - xdg-desktop-portal
     - xdg-desktop-portal-wlr
     - swayimg
+    - swaybg
     - xorg-xwayland
 
   RedHat:
@@ -56,3 +58,4 @@ sway_packages:
     - xdg-desktop-portal
     - xdg-desktop-portal-wlr
     - swayimg
+    - swaybg
