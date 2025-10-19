@@ -37,6 +37,7 @@ sway_packages:
     - xdg-desktop-portal
     - xdg-desktop-portal-wlr
     - swayimg
+    - xorg-xwayland
 
   RedHat:
     - sway
