@@ -201,7 +201,7 @@ return {
           },
         },
       },
-      -- gopls = {},
+      gopls = {},
       -- rust_analyzer = {},
 
       -- additions
