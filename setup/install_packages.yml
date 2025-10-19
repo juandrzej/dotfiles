@@ -19,7 +19,7 @@
         name: "{{ specific_packages[ansible_os_family] }}"
         state: present
 
-    # - name: Install sway packages
-    #   ansible.builtin.package:
-    #     name: "{{ sway_packages[ansible_os_family] }}"
-    #     state: present
+    - name: Install sway packages
+      ansible.builtin.package:
+        name: "{{ sway_packages[ansible_os_family] }}"
+        state: present
