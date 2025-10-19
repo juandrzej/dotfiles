@@ -29,7 +29,7 @@ set $menu wofi --show drun
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg /home/juandrzej/Pictures/tool_lat1.jpg fill
+output * bg /home/juandrzej/Pictures/tokyo1.jpg fill
 
 
 ### Input configuration
@@ -279,8 +279,8 @@ exec flatpak run md.obsidian.Obsidian
 exec flatpak run com.spotify.Client
 
 # Start clipboard history daemon & bind keys
-exec clipboard-history daemon
-bindsym $mod+Ctrl+v exec ~/bin/clipboard-history clipboard
+# exec clipboard-history daemon
+# bindsym $mod+Ctrl+v exec ~/bin/clipboard-history clipboard
 
 # Return to workspace 1 after startup
 exec swaymsg 'workspace 1'
