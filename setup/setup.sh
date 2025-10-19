@@ -17,6 +17,6 @@ arch)
 *) echo "This distribution is not set up" ;;
 esac
 
-git clone git@github.com:juandrzej/dotfiles.git ~/.dotfiles
+git clone https://github.com/juandrzej/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles/setup
 ansible-playbook install_packages.yml --ask-become-pass
