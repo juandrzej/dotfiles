@@ -18,6 +18,7 @@ flatpak install -y flathub com.protonvpn.www
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub org.signal.Signal
+flatpak install -y flathub com.spotify.Client
 
 # Choose one depending on DE (GNOME or KDE)
 # flatpak install -y flathub com.transmissionbt.Transmission
