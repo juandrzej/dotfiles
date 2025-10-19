@@ -30,6 +30,7 @@ common_packages:
   - file
   - ufw
   - flatpak
+  - npm
 
 specific_packages:
   Debian:
@@ -44,6 +45,7 @@ specific_packages:
     - keyd
     - libreoffice
     - python3
+    - gh
 
   Archlinux:
     - vim
@@ -58,6 +60,8 @@ specific_packages:
     - python
     - uv
     - ghostty
+    - github-cli
+    - openssh
 
   RedHat:
     - vim-enhanced
@@ -68,5 +72,6 @@ specific_packages:
     - python3
     - uv
     - ffmpeg-free
+    - gh
     # no keyd regularly on fedora, google how to dl
     # no starship on fedora dnf??
