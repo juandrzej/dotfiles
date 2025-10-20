@@ -67,7 +67,7 @@ if [ -d "$HOME/bin" ]; then
 fi
 
 # For nala completions
-[ -f "$HOME/.bash_completions/nala.sh" ] && source "$HOME/.bash_completions/nala.sh"
+# [ -f "$HOME/.bash_completions/nala.sh" ] && source "$HOME/.bash_completions/nala.sh"
 
 # GitHub Titus Additions
 gcom() {

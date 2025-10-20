@@ -18,12 +18,6 @@ set $term alacritty
 set $menu wofi --show drun
 
 ### Output configuration
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# This is commented in Debian, because the Sway wallpaper files are in a separate
-# package `sway-backgrounds`. Installing this package drops a config file to
-# /etc/sway/config.d/
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
@@ -35,7 +29,6 @@ output * bg /home/juandrzej/Pictures/tokyo1.jpg fill
 ### Input configuration
 input "type:keyboard" {
     xkb_layout pl
-    # xkb_options caps:swapescape
 }
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -90,9 +83,10 @@ input "type:keyboard" {
         smart_gaps on
 
 # Assign applications to specific workspaces
-assign [app_id="Brave-browser"] workspace 2
+assign [app_id="brave-browser"] workspace 2
 assign [class="obsidian"] workspace 3
-assign [app_id="ghostty"] workspace 4
+assign [app_id="org.signal.Signal"] workspace 5
+assign [class="discord"] workspace 5
 assign [class="Spotify"] workspace 6
 
 
@@ -254,9 +248,9 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ to
 # Screenshot entire screen
 bindsym Print exec grim ~/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M:%S).png
 # Screenshot selection
-bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M:%S).png
+bindsym Ctrl+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M:%S).png
 # Screenshot to clipboard
-bindsym Ctrl+Print exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 # Screensharing setup line
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
@@ -266,21 +260,15 @@ exec waybar
 
 ### Idle configuration
 exec swayidle -C ~/.config/swayidle/config
-# When brave is fullscreen, idle doesn't work <3
-for_window [class="Brave-browser"] inhibit_idle fullscreen
 
 # Auto-start applications on boot
 exec flatpak run com.protonvpn.www
 exec swaymsg 'workspace 1; exec alacritty'
 exec swaymsg 'workspace 4; exec alacritty --working-directory /home/juandrzej/Code'
 exec swaymsg 'workspace 7; exec alacritty --working-directory /home/juandrzej/Videos'
-exec brave-browser
+exec flatpak run com.brave.Browser
 exec flatpak run md.obsidian.Obsidian
 exec flatpak run com.spotify.Client
-
-# Start clipboard history daemon & bind keys
-# exec clipboard-history daemon
-# bindsym $mod+Ctrl+v exec ~/bin/clipboard-history clipboard
 
 # Return to workspace 1 after startup
 exec swaymsg 'workspace 1'

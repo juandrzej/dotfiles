@@ -37,6 +37,7 @@ sway_packages:
     - wireplumber
     - xdg-desktop-portal
     - xdg-desktop-portal-wlr
+    - xdg-desktop-portal-gtk
     - swayimg
     - swaybg
     - xorg-xwayland
