@@ -1,0 +1,6 @@
+lines=5
+columns=2
+filter_rate=10
+prompt=Search...
+no_actions=true
+allow_images=true

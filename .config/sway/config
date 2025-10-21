@@ -79,8 +79,8 @@ input "type:keyboard" {
         gaps top 1
         gaps bottom 1
 
-        # Hide gaps when there is only 1 window
-        smart_gaps on
+        # Hide gaps when there is only 1 window = on
+        smart_gaps off
 
 # Assign applications to specific workspaces
 assign [app_id="brave-browser"] workspace 2
