@@ -15,7 +15,7 @@ flatpak update -y --noninteractive
 # Install applications silently with --noninteractive (avoids prompts)
 flatpak install -y flathub com.protonvpn.www
 flatpak install -y flathub com.brave.Browser
-flatpak install -y flathub md.obsidian.Obsidian
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub org.signal.Signal
-flatpak install -y flathub com.spotify.Client
+# flatpak install -y flathub md.obsidian.Obsidian
+# flatpak install -y flathub com.spotify.Client

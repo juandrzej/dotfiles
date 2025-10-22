@@ -59,9 +59,9 @@ specific_packages:
     - libreoffice-still
     - python
     - uv
-    - ghostty
     - github-cli
-    - openssh
+    - ncspot
+    - obsidian
 
   RedHat:
     - vim-enhanced
