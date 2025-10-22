@@ -263,13 +263,13 @@ exec swayidle -C ~/.config/swayidle/config
 
 # Auto-start applications on boot
 exec flatpak run com.protonvpn.www
-exec swaymsg 'workspace 1; exec alacritty'
+exec swaymsg 'workspace 1; exec $term'
 exec swaymsg 'workspace 3; exec obsidian'
-exec swaymsg 'workspace 4; exec alacritty --working-directory /home/juandrzej/Code'
-exec swaymsg 'workspace 7; exec alacritty --working-directory /home/juandrzej/Videos'
+exec swaymsg 'workspace 4; exec $term --working-directory /home/juandrzej/Code'
+exec swaymsg 'workspace 6; exec $term -e ncspot'
+exec swaymsg 'workspace 7; exec $term -e yazi'
 exec flatpak run com.brave.Browser
 # exec flatpak run md.obsidian.Obsidian
-exec swaymsg 'workspace 6; exec alacritty -e ncspot'
 # exec flatpak run com.spotify.Client
 
 # Return to workspace 1 after startup
