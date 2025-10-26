@@ -21,7 +21,7 @@ fi
 # Remove a directory and all files
 alias rmd='/bin/rm  --recursive --force --verbose '
 
-alias fd='fdfind'
+# alias fd='fdfind'
 alias fh='fd -H' # include hidden
 # Search files in the current folder
 # alias f='find . | grep '
@@ -39,7 +39,7 @@ alias snvim='sudo nvim'
 
 # Power commands
 alias gomommy='systemctl suspend'
-alias godaddy='systemctl suspend-then-hibernate'
+# alias godaddy='systemctl suspend-then-hibernate'
 alias papi='sudo shutdown now'
 alias phoenix='sudo reboot'
 
