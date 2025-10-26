@@ -1,6 +1,6 @@
 use_nerdfont = true
 cover_max_scale = 2
-
+library_tabs = ["albums", "tracks", "playlists", "artists"]
 statusbar_format = "%artists - %title - %album"
 
 [keybindings]
