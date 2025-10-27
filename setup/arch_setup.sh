@@ -6,16 +6,14 @@ timedatectl
 gdisk /dev/nvme0n1
 
 # disc formatting
-mkfs.fat -F 32 /dev/nvme0n1p1
-mkswap /dev/nvme0n1p2
 mkfs.btrfs /dev/nvme0n1p3
-mkfs.btrfs /dev/nvme0n1p4
+mkswap /dev/nvme0n1p2
+mkfs.fat -F 32 /dev/nvme0n1p1
 
 # mounting
+mount /dev/nvme0n1p3 /mnt
 mount --mkdir /dev/nvme0n1p1 /mnt/boot
 swapon /dev/nvme0n1p2
-mount /dev/nvme0n1p3 /mnt
-mount /dev/nvme0n1p4 /mnt/home
 
 # select mirrors
 reflector --country PL,DE --latest 5 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
@@ -44,11 +42,30 @@ echo "juandrzej-arch" >/etc/hostname
 passwd
 useradd -m -G wheel,users juandrzej
 passwd juandrzej
+visudo
 systemctl enable NetworkManager
 
 # bootloader
 pacman -S man-db man-pages
+bootctl install
 
+# create boot entry
+cat >/boot/loader/entries/arch.conf <<EOF
+title   Arch Linux
+linux   /vmlinuz-linux
+initrd  /initramfs-linux.img
+options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw
+EOF
+
+# loader configuration
+cat >/boot/loader/loader.conf <<EOF
+default arch.conf
+timeout 2
+console-mode max
+editor  no
+EOF
+
+# finish
 exit
 umount -R /mnt
 reboot

@@ -1,3 +1,11 @@
 #!/bin/bash
 
+sudo pacman -Syu
+sudo pacman -S git
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg -si
+cd ..
+rm -rf yay/
+
 yay -S mkinitcpio-firmware
