@@ -50,5 +50,3 @@ timeout 2
 console-mode max
 editor  no
 EOF
-
-exit

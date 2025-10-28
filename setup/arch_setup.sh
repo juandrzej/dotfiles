@@ -37,7 +37,10 @@ pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel vi vim networkma
 # configure filesystem
 genfstab -U /mnt >>/mnt/etc/fstab
 
-arch-chroot /mnt
+# dl separate chroot steps script, make it executable and run it inside chroot
+curl -sSL https://raw.githubusercontent.com/juandrzej/dotfiles/main/setup/arch_chroot_setup.sh -o /mnt/tmp/chroot_setup.sh
+chmod +x /mnt/tmp/chroot_setup.sh
+arch-chroot /mnt /tmp/chroot_setup.sh
 
 # finish
 umount -R /mnt
