@@ -1,9 +1,13 @@
 #!/bin/bash
+set -e # exit on any error
 
 timedatectl
 
 # disc partitioning
-gdisk /dev/nvme0n1
+sgdisk -o /dev/nvme0n1                    # clear current setup
+sgdisk -n 1:0:+1G -t 1:EF00 /dev/nvme0n1  # EFI
+sgdisk -n 2:0:+20G -t 2:8200 /dev/nvme0n1 # swap
+sgdisk -n 3:0:0 -t 3:8300 /dev/nvme0n1    # root
 
 # disc formatting
 mkfs.btrfs /dev/nvme0n1p3
@@ -33,6 +37,7 @@ pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel vi vim networkma
 # configure filesystem
 genfstab -U /mnt >>/mnt/etc/fstab
 
+# all below must go to separate script???
 arch-chroot /mnt
 
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -51,6 +56,9 @@ echo "juandrzej-arch" >/etc/hostname
 passwd
 useradd -m -G wheel,users juandrzej
 passwd juandrzej
+# enable sudo for wheel group
+echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >/etc/sudoers.d/wheel
+chmod 440 /etc/sudoers.d/wheel
 systemctl enable NetworkManager
 
 # bootloader
@@ -62,6 +70,15 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
+options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw
+EOF
+
+# create fallback boot entry
+cat >/boot/loader/entries/arch-fallback.conf <<EOF
+title   Arch Linux (fallback)
+linux   /vmlinuz-linux
+initrd  /amd-ucode.img
+initrd  /initramfs-linux-fallback.img
 options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw
 EOF
 
