@@ -39,7 +39,7 @@ alias snvim='sudo nvim'
 
 # Power commands
 alias gomommy='systemctl suspend'
-# alias godaddy='systemctl suspend-then-hibernate'
+alias godaddy='systemctl suspend-then-hibernate'
 alias papi='sudo shutdown now'
 alias phoenix='sudo reboot'
 

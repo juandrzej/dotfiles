@@ -31,7 +31,7 @@ title   Arch Linux
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux.img
-options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw
+options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw resume=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2)
 EOF
 
 # create fallback boot entry
@@ -40,7 +40,7 @@ title   Arch Linux (fallback)
 linux   /vmlinuz-linux
 initrd  /amd-ucode.img
 initrd  /initramfs-linux-fallback.img
-options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw
+options root=UUID=$(blkid -s UUID -o value /dev/nvme0n1p3) rootflags=subvol=@ rw resume=UUID=$(blkid -s UUID -o value /dev/nvme0n1p2)
 EOF
 
 # loader configuration
@@ -50,3 +50,9 @@ timeout 2
 console-mode max
 editor  no
 EOF
+
+# add resume hook to mkinitcpio.conf (only if not already present)
+sed -i '/^HOOKS=/{ /resume/! s/filesystems/filesystems resume/ }' /etc/mkinitcpio.conf
+
+# regenerate initramfs
+mkinitcpio -P
