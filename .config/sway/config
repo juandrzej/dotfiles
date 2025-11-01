@@ -17,13 +17,28 @@ set $term alacritty
 # Your preferred application launcher
 set $menu wofi --show drun
 
+# ── SwayFX extra visual options ────────────────────────────────────────
+blur enable
+blur_passes 1
+shadows enable
+corner_radius 20
+default_dim_inactive 0.2
+layer_effects "waybar" {
+    # blur enable;
+    # blur_xray enable;
+    # blur_ignore_transparent enable;
+    # shadows enable;
+    corner_radius 20;
+}
+# ────────────────────────────────────────────────────────────────────────
+
 ### Output configuration
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-output * bg /home/juandrzej/Pictures/tokyo1.jpg fill
+output * bg /home/juandrzej/Pictures/tokyo4.jpg fill
 
 
 ### Input configuration
@@ -95,14 +110,17 @@ assign [class="discord"] workspace 5
 #
 # Basics:
 #
-    # Start a terminal
-    bindsym $mod+Return exec $term
-
     # Kill focused window
     bindsym $mod+q kill
 
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Start browser
+    bindsym $mod+b exec qutebrowser
 
     # Lock screen manually
     bindsym $mod+x exec swaylock
@@ -183,7 +201,7 @@ assign [class="discord"] workspace 5
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+Shift+v splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
