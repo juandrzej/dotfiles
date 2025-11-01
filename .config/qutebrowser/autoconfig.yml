@@ -6,24 +6,7 @@
 
 config_version: 2
 settings:
-  auto_save.session:
-    global: true
-  colors.webpage.darkmode.enabled:
-    global: true
-  colors.webpage.darkmode.policy.page:
-    global: smart
-  content.notifications.enabled:
-    https://www.youtube.com: false
-  statusbar.position:
-    global: bottom
-  statusbar.show:
-    global: always
-  url.default_page:
-    global: https:/qwant.com
-  url.searchengines:
-    global:
-      DEFAULT: https://qwant.com/?q={}
-      aw: https://wiki.archlinux.org/?search={}
-      y: https://www.youtube.com/results?search_query={}
-  url.start_pages:
-    global: https:/qwant.com
+  content.javascript.clipboard:
+    https://pass.proton.me: access-paste
+  content.register_protocol_handler:
+    https://mail.proton.me#mailto=%25s: true
