@@ -10,6 +10,9 @@ c.url.searchengines = {
     "aw": "https://wiki.archlinux.org/?search={}",
     "yt": "https://www.youtube.com/results?search_query={}",
     "rym": "https://rateyourmusic.com/search?searchterm={}",
+    "wp": "https://en.wikipedia.org/wiki/{}",
+    "gh": "https://github.com/search?q={}",
+    "rd": "https://www.reddit.com/search?q={}",
 }
 
 ### Keybindings 
