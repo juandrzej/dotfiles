@@ -4,7 +4,9 @@
     "height": 35,
     "modules-left": ["sway/workspaces", "sway/window"],
     "modules-center": ["clock", "clock#US"],
-    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "temperature", "cpu", "memory", "network"],
+    "modules-right": ["mpris", "tray", "idle_inhibitor", "pulseaudio", "temperature", "cpu", "memory", "network"],
+
+
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -25,10 +27,12 @@
         }
     },
 
+
     "sway/window": {
         "max-length": 40,
         "tooltip": false
     },
+
 
 
     "clock": {
@@ -58,6 +62,21 @@
 	"timezone": "America/New_York"
     },
 
+
+
+
+    "mpris": {
+    "format": "{status_icon} {artist} - {title}",
+    "format-paused": "{status_icon} {artist} - {title}",
+    "status-icons": {
+        "paused": "⏸",
+        "playing": "▶"
+    },
+    "max-length": 30,
+    "tooltip-format": "{player}\n{artist}\n{album}\n{title}"
+    },
+
+
     "tray": {
         "icon-size": 18,
         "spacing": 8
@@ -72,13 +91,6 @@
         },
     },
 
-    "network": {
-        "format": "{icon}",
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": "󰌗 {ifname}",
-        "format-disconnected": "⚠ Disconnected",
-        "tooltip": false
-    },
 
     "pulseaudio": {
         "format": "{icon:2}{volume}%",
@@ -92,6 +104,7 @@
         "tooltip": false,
     },
 
+
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 75,
@@ -101,17 +114,29 @@
         "tooltip": false,
     },
 
+
     "cpu": {
         "interval": 5,
         "format": "󰘚 {}%",
         "max-length": 10,
     },
 
+
     "memory": {
         "interval": 15,
         "format": "︁ {used:0.1f}/{total:0.1f}",
         "tooltip": false,
     },
+
+
+    "network": {
+        "format": "{icon}",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": "󰌗 {ifname}",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip": false
+    },
+
 
     "custom/power": {
         "format" : "⏻ ",
@@ -127,4 +152,3 @@
     },
 
 }
-
