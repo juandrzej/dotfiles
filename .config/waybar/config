@@ -2,9 +2,9 @@
     "layer": "top",
     "position": "top",
     "height": 35,
-    "modules-left": ["sway/workspaces", "sway/window"],
+    "modules-left": ["sway/workspaces", "tray", "idle_inhibitor", "sway/window"],
     "modules-center": ["clock", "clock#US"],
-    "modules-right": ["mpris", "tray", "idle_inhibitor", "pulseaudio", "temperature", "cpu", "memory", "network"],
+    "modules-right": ["mpris", "pulseaudio", "temperature", "cpu", "memory", "network"],
 
 
 

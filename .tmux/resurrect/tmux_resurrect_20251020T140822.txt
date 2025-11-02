@@ -1,6 +1,0 @@
-pane	bootdev	1	0	:-	1	juandrzej@juandrzejarch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	1	nvim	:nvim
-pane	bootdev	2	1	:*	1	juandrzej@juandrzejarch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	1	bash	:
-pane	bootdev	2	1	:*	2	juandrzej@juandrzejarch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	0	bash	:
-window	bootdev	1	:nvim	0	:-	c99d,240x57,0,0,0	:
-window	bootdev	2	:bash	1	:*	d848,240x57,0,0{120x57,0,0,1,119x57,121,0,2}	:
-state	bootdev	
