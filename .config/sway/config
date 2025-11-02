@@ -32,7 +32,7 @@ layer_effects "waybar" {
 
 ### Output configuration swaymsg -t get_outputs
 output HDMI-A-1 resolution 1920x1080 position 1920,0
-output * bg /home/juandrzej/Pictures/tokyo4.jpg fill
+output * bg ~/Pictures/tokyo4.jpg fill
 ### Input configuration swaymsg -t get_inputs
 input "type:keyboard" {
     xkb_layout pl,ru
@@ -79,6 +79,7 @@ bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 ### Workspaces:
+workspace_auto_back_and_forth yes
 # Navigate workspaces with Super + n/p (next/previous)
 bindsym $mod+n workspace next
 bindsym $mod+p workspace prev
@@ -118,21 +119,14 @@ bindsym $mod+t splitt
 # Toggle the current focus between tiling and floating mode
 bindsym $mod+space floating toggle
 # Swap focus between the tiling area and the floating area
-bindsym $mod+s focus mode_toggle
+bindsym $mod+g focus mode_toggle
 # Switch the current container between different layout styles
 # bindsym $mod+s layout stacking
 # bindsym $mod+w layout tabbed
 # bindsym $mod+e layout toggle split
-
-
 ### Scratchpad:
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
-# Move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+bindsym $mod+a move scratchpad
+bindsym $mod+s scratchpad show
 
 
 ### Resizing containers:

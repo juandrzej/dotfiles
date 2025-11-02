@@ -62,10 +62,10 @@ specific_packages:
     - python
     - uv
     - github-cli
-    - ncspot
     - obsidian
     - jq
     - ncspot
+    - ueberzugpp
 
   RedHat:
     - vim-enhanced

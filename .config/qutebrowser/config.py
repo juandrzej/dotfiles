@@ -7,13 +7,17 @@ c.statusbar.show = "always"
 c.url.default_page = "https://qwant.com"
 c.url.start_pages = ["https://qwant.com"]
 c.url.searchengines = {
-    "DEFAULT": "https://qwant.com/?q={}",
+    "DEFAULT": "https://duckduckgo.com/?q={}",
     "aw": "https://wiki.archlinux.org/?search={}",
     "yt": "https://www.youtube.com/results?search_query={}",
     "rym": "https://rateyourmusic.com/search?searchterm={}",
     "wp": "https://en.wikipedia.org/wiki/{}",
     "gh": "https://github.com/search?q={}",
     "rd": "https://www.reddit.com/search?q={}",
+    "py": "https://docs.python.org/3/search.html?q={}",
+    "pypi": "https://pypi.org/search/?q={}",
+    "go": "https://pkg.go.dev/search?q={}",
+    "god": "https://go.dev/search?q={}",
 }
 
 ### Keybindings 
