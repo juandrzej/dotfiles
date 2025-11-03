@@ -31,11 +31,14 @@ common_packages:
   - ufw
   - flatpak
   - npm
+  - rsync
+  - qutebrowser
+  - jq
 
 specific_packages:
   Debian:
-    - vim
     - xclip
+    - vim
     - starship
     - sd
     - du-dust
@@ -46,8 +49,6 @@ specific_packages:
     - libreoffice
     - python3
     - gh
-    - openssh
-    - qutebrowser
 
   Archlinux:
     - vim
@@ -63,19 +64,20 @@ specific_packages:
     - uv
     - github-cli
     - obsidian
-    - jq
     - ncspot
     - ueberzugpp
+    - openssh
 
   RedHat:
     - vim-enhanced
+    - sd
     - du-dust
     - ranger
     - fd-find
+    - ffmpeg-free
     - libreoffice
     - python3
     - uv
-    - ffmpeg-free
     - gh
     # no keyd regularly on fedora, google how to dl
     # no starship on fedora dnf??

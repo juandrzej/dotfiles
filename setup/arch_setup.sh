@@ -4,10 +4,10 @@ set -e # exit on any error
 timedatectl
 
 # disc partitioning
-sgdisk -o /dev/nvme0n1                    # clear current setup
-sgdisk -n 1:0:+1G -t 1:EF00 /dev/nvme0n1  # EFI
-sgdisk -n 2:0:+20G -t 2:8200 /dev/nvme0n1 # swap
-sgdisk -n 3:0:0 -t 3:8300 /dev/nvme0n1    # root
+sgdisk -o /dev/nvme0n1                   # clear current setup
+sgdisk -n 1:0:+1G -t 1:EF00 /dev/nvme0n1 # EFI
+sgdisk -n 2:0:+4G -t 2:8200 /dev/nvme0n1 # swap
+sgdisk -n 3:0:0 -t 3:8300 /dev/nvme0n1   # root
 
 # disc formatting
 mkfs.btrfs /dev/nvme0n1p3
