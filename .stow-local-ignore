@@ -1,6 +1,7 @@
 .git
 .gitignore
 .ansible
+archive
 setup
 README.md
 LICENSE

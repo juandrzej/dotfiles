@@ -44,9 +44,12 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-# Alias definitions
+# Alias and functions definitions
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
+fi
+if [ -f ~/.bash_functions ]; then
+	. ~/.bash_functions
 fi
 
 # Enable color support for traditional tools (fallback)
@@ -69,28 +72,12 @@ fi
 # For nala completions
 # [ -f "$HOME/.bash_completions/nala.sh" ] && source "$HOME/.bash_completions/nala.sh"
 
-# GitHub Titus Additions
-gcom() {
-	git add .
-	git commit -m "$1"
-}
-lazyg() {
-	git add .
-	git commit -m "$1"
-	git push
-}
-
 # Setup starship (command prompt), zoxide (better cd), fzf key bindings with fuzzy completion and fzf colorscheme, uv (for python)
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 source ~/.config/fzf/tokyonight_storm.sh
 eval "$(uv generate-shell-completion bash)"
-
-# If fastfetch installed, run it
-# if command -v fastfetch &> /dev/null; then
-#     fastfetch
-# fi
 
 # added temp for boot.dev
 export PATH=$PATH:$HOME/go/bin

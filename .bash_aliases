@@ -12,19 +12,15 @@ alias lf='lsd -l | egrep -v "^d"' # files only
 alias ldir='lsd -l | egrep "^d"'  # directories only
 alias atree='lsd --tree --all --ignore-glob .git'
 alias atreep='lsd --tree --all --ignore-glob .git --ignore-glob .venv  --ignore-glob __pycache__ --ignore-glob .mypy_cache --ignore-glob .pytest_cache'
+alias rmd='/bin/rm  --recursive --force --verbose ' # Remove a directory and all files
+alias fh='fd -H'                                    # include hidden
 
 # for debian due to diff package name
 if command -v batcat >/dev/null 2>&1; then
 	alias bat='batcat'
+	alias fd='fdfind'
+	alias nala-up='sudo nala update && sudo nala upgrade'
 fi
-
-# Remove a directory and all files
-alias rmd='/bin/rm  --recursive --force --verbose '
-
-# alias fd='fdfind'
-alias fh='fd -H' # include hidden
-# Search files in the current folder
-# alias f='find . | grep '
 
 # Change directory aliases
 alias ..='cd ..'
@@ -39,7 +35,7 @@ alias snvim='sudo nvim'
 
 # Power commands
 alias gomommy='systemctl suspend'
-alias godaddy='systemctl suspend-then-hibernate'
+# alias godaddy='systemctl suspend-then-hibernate'
 alias papi='sudo shutdown now'
 alias phoenix='sudo reboot'
 
@@ -49,7 +45,6 @@ alias dif='git diff'
 alias status='git status'
 
 alias reload='source ~/.bashrc'
-alias nala-up='sudo nala update && sudo nala upgrade'
 alias docker-clear-containers='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
 alias nf='file=$(find . -type f -not -path "*/node_modules/*" -not -path "*/__pycache__/*" -not -path "*/.git/*" | fzf --height 40% --layout=reverse --border --preview "head -50 {}") && nvim "$file"'
 alias ktmux='tmux kill-server'
