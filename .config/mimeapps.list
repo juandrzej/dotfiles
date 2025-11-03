@@ -39,7 +39,7 @@ audio/ogg=mpv.desktop
 audio/x-wav=mpv.desktop
 
 # Documents
-application/pdf=libreoffice-draw.desktop
+application/pdf=org.pwmt.zathura.desktop
 application/vnd.oasis.opendocument.text=libreoffice-writer.desktop
 application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop
 application/vnd.ms-excel=libreoffice-calc.desktop

@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  content.javascript.clipboard:
-    https://pass.proton.me: access-paste
   content.register_protocol_handler:
     https://mail.proton.me#mailto=%25s: true
