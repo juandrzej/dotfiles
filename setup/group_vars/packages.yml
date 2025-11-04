@@ -67,6 +67,8 @@ specific_packages:
     - ncspot
     - ueberzugpp
     - openssh
+    - zathura
+    - zathura-pdf-poppler
 
   RedHat:
     - vim-enhanced
