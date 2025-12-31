@@ -158,7 +158,7 @@ bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 
 
 ### Assign applications to specific workspaces
-assign [app_id="brave-browser"] workspace 2
+# assign [app_id="brave-browser"] workspace 2
 assign [app_id="org.qutebrowser.qutebrowser"] workspace 2
 assign [class="obsidian"] workspace 3
 assign [app_id="org.signal.Signal"] workspace 5
@@ -175,10 +175,10 @@ exec swayidle -C ~/.config/swayidle/config
 exec flatpak run com.protonvpn.www
 exec swaymsg 'workspace 1; exec $term'
 exec swaymsg 'workspace 2; exec $browser'
-exec swaymsg 'workspace 3; exec obsidian'
-exec swaymsg 'workspace 4; exec $term --working-directory /home/juandrzej/Code'
-exec swaymsg 'workspace 6; exec $term -e ncspot'
-exec swaymsg 'workspace 6; exec $term -e yazi'
+# exec swaymsg 'workspace 3; exec obsidian'
+# exec swaymsg 'workspace 4; exec $term --working-directory /home/juandrzej/Code'
+# exec swaymsg 'workspace 6; exec $term -e ncspot'
+# exec swaymsg 'workspace 6; exec $term -e yazi'
 # exec flatpak run com.brave.Browser
 # exec flatpak run md.obsidian.Obsidian
 # exec flatpak run com.spotify.Client
