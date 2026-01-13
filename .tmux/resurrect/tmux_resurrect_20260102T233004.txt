@@ -8,4 +8,4 @@ window	blog-agg	1	:nvim	1	:*	c4de,237x55,0,0,1	:
 window	blog-agg	2	:bash	0	:-	f6f9,237x55,0,0{118x55,0,0,2,118x55,119,0,3}	:
 window	pokedex	1	:nvim	1	:*	c4e1,237x55,0,0,4	:
 window	pokedex	2	:bash	0	:-	76fe,237x55,0,0{118x55,0,0,5,118x55,119,0,6}	:
-state	blog-agg	pokedex
+state	blog-agg	

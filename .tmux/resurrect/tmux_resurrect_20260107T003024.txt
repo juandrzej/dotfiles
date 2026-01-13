@@ -1,0 +1,11 @@
+pane	blog-agg	1	0	:-	1	juandrzej@juandrzej-arch:~/Code/postgreSQL-blog-aggregator	:/home/juandrzej/Code/postgreSQL-blog-aggregator	1	nvim	:nvim
+pane	blog-agg	2	1	:*	1	juandrzej@juandrzej-arch:~/Code/postgreSQL-blog-aggregator	:/home/juandrzej/Code/postgreSQL-blog-aggregator	0	bash	:
+pane	blog-agg	2	1	:*	2	juandrzej@juandrzej-arch:~/Code/postgreSQL-blog-aggregator	:/home/juandrzej/Code/postgreSQL-blog-aggregator	1	bash	:
+pane	pokedex	1	1	:*	1	juandrzej@juandrzej-arch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	1	nvim	:nvim -S
+pane	pokedex	2	0	:-	1	juandrzej@juandrzej-arch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	0	bash	:
+pane	pokedex	2	0	:-	2	juandrzej@juandrzej-arch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	1	bash	:
+window	blog-agg	1	:nvim	0	:-	c4de,237x55,0,0,1	:
+window	blog-agg	2	:bash	1	:*	f6f9,237x55,0,0{118x55,0,0,2,118x55,119,0,3}	:
+window	pokedex	1	:nvim	1	:*	c4e1,237x55,0,0,4	:
+window	pokedex	2	:bash	0	:-	76fe,237x55,0,0{118x55,0,0,5,118x55,119,0,6}	:
+state	blog-agg	
