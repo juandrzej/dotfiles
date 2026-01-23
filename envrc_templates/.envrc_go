@@ -1,0 +1,25 @@
+start_postgresql() {
+	sudo systemctl start postgresql
+}
+
+dbadmin() {
+	sudo -u postgres psql
+}
+
+export DB_URL="protocol://username:password@host:port/database"
+db() {
+	psql "$DB_URL"
+}
+gmup() {
+	goose -dir sql/schema postgres "$DB_URL" up
+}
+gmdown() {
+	goose -dir sql/schema postgres "$DB_URL" down
+}
+gmstatus() {
+	goose -dir sql/schema postgres "$DB_URL" status
+}
+gmreset() {
+	goose -dir sql/schema postgres "$DB_URL" reset
+}
+
