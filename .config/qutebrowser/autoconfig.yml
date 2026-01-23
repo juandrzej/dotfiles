@@ -7,5 +7,5 @@
 config_version: 2
 settings:
   content.javascript.clipboard:
-    https://github.com: access-paste
+    https://claude.ai: access-paste
     https://www.boot.dev: access-paste

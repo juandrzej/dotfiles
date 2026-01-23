@@ -78,6 +78,7 @@ eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
 source ~/.config/fzf/tokyonight_storm.sh
 eval "$(uv generate-shell-completion bash)"
+eval "$(direnv hook bash)"
 
 # added temp for boot.dev
 export PATH=$PATH:$HOME/go/bin
