@@ -69,6 +69,7 @@ specific_packages:
     - openssh
     - zathura
     - zathura-pdf-poppler
+    - direnv
 
   RedHat:
     - vim-enhanced
