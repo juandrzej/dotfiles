@@ -12,5 +12,14 @@ return {
     vim.cmd.colorscheme 'tokyonight-moon'
     -- vim.cmd.colorscheme 'tokyonight-storm'
     -- vim.cmd.colorscheme 'tokyonight-day'
+
+    -- Theme switcher
+    local themes = { 'tokyonight-moon', 'tokyonight-storm', 'tokyonight-day' }
+    local current = 1
+
+    vim.keymap.set('n', '<leader>tt', function()
+      current = (current % #themes) + 1
+      vim.cmd.colorscheme(themes[current])
+    end, { desc = 'Toggle Theme' })
   end,
 }

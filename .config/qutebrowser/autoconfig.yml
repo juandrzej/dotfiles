@@ -7,5 +7,4 @@
 config_version: 2
 settings:
   content.javascript.clipboard:
-    https://claude.ai: access-paste
-    https://www.boot.dev: access-paste
+    https://pass.proton.me: access-paste

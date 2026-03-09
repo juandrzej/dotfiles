@@ -8,7 +8,7 @@ vim.keymap.set('n', '<leader>tv', ':vsplit | terminal<CR>', { desc = 'Terminal v
 
 -- Toggle keymaps
 vim.keymap.set('n', '<leader>tz', '<cmd>ZenMode<CR>', { desc = 'Toggle Zen Mode' })
-vim.keymap.set('n', '<leader>tt', '<cmd>Twilight<CR>', { desc = 'Toggle Twilight' })
+vim.keymap.set('n', '<leader>tw', '<cmd>Twilight<CR>', { desc = 'Toggle Twilight' })
 vim.keymap.set('n', '<leader>td', '<cmd>Hardtime toggle<CR>', { desc = 'Toggle Hardtime' })
 vim.keymap.set('n', '<leader>tg', '<cmd>VimBeGood<CR>', { desc = 'Toggle VimBeGood' })
 
