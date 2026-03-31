@@ -2,8 +2,9 @@ pane	blog-agg	1	0	:-	1	juandrzej@juandrzej-arch:~/Code/postgreSQL-blog-aggregato
 pane	blog-agg	2	1	:*	1	juandrzej@juandrzej-arch:~/Code/postgreSQL-blog-aggregator	:/home/juandrzej/Code/postgreSQL-blog-aggregator	0	bash	:
 pane	blog-agg	2	1	:*	2	juandrzej@juandrzej-arch:~/Code/postgreSQL-blog-aggregator	:/home/juandrzej/Code/postgreSQL-blog-aggregator	1	bash	:
 pane	chirpy	1	1	:*	1	juandrzej@juandrzej-arch:~/Code/chirpy-http-server	:/home/juandrzej/Code/chirpy-http-server	1	nvim	:nvim
-pane	chirpy	2	0	:-	1	juandrzej@juandrzej-arch:~/Code/chirpy-http-server	:/home/juandrzej/Code/chirpy-http-server	0	bash	:
-pane	chirpy	2	0	:-	2	juandrzej@juandrzej-arch:~/Code/chirpy-http-server	:/home/juandrzej/Code/chirpy-http-server	1	bash	:
+nvim
+pane	chirpy	2	0	:-	1	juandrzej@juandrzej-arch:~/Code/chirpy-http-server	:/home/juandrzej/Code/chirpy-http-server	1	bash	:
+pane	chirpy	2	0	:-	2	juandrzej@juandrzej-arch:~/Code/chirpy-http-server	:/home/juandrzej/Code/chirpy-http-server	0	bash	:
 pane	chirpy	3	0	:	1	juandrzej@juandrzej-arch:~/Code/chirpy-http-server	:/home/juandrzej/Code/chirpy-http-server	1	bash	:
 pane	pokedex	1	1	:*	1	juandrzej@juandrzej-arch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	1	nvim	:nvim -S
 pane	pokedex	2	0	:-	1	juandrzej@juandrzej-arch:~/Code/pokedex	:/home/juandrzej/Code/pokedex	0	bash	:

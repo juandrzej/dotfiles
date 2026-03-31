@@ -25,3 +25,12 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# NMCLI WiFi connect
+wificonnect() {
+	if [ -z "$2" ]; then
+		nmcli dev wifi connect "$1"
+	else
+		nmcli dev wifi connect "$1" password "$2"
+	fi
+}

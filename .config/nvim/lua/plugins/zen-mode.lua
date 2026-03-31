@@ -3,7 +3,11 @@ return {
     'folke/zen-mode.nvim',
     dependencies = { 'folke/twilight.nvim' },
     cmd = 'ZenMode', -- lazy load until you run the command
-    opts = {},
+    opts = {
+      plugins = {
+        twilight = { enabled = false }, -- don't auto-enable Twilight when ZenMode opens
+      },
+    },
   },
 
   {
