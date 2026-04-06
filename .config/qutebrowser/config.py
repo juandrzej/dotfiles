@@ -39,8 +39,11 @@ c.content.headers.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleW
 # content.javascript.clipboard
 config.set("content.javascript.clipboard", "access-paste", "https://pass.proton.me")
 config.set("content.javascript.clipboard", "access-paste", "https://www.boot.dev")
+config.set("content.javascript.clipboard", "access-paste", "https://github.com")
 # content.notifications.enabled
 config.set("content.notifications.enabled", True, "https://mail.proton.me")
+# content.register_protocol_handler
+config.set("content.register_protocol_handler", True, "https://mail.proton.me#mailto=%25s")
 
 ### Source theme from designated file
 config.source('tokyonight_theme.py')
