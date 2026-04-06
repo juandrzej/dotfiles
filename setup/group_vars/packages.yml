@@ -64,7 +64,6 @@ specific_packages:
     - uv
     - github-cli
     - obsidian
-    - ncspot
     - ueberzugpp
     - openssh
     - zathura
