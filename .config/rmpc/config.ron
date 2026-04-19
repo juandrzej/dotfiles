@@ -58,12 +58,10 @@
             "<S-Tab>":    PreviousTab,
             "gT":         PreviousTab,
             "1":          SwitchToTab("Queue"),
-            "2":          SwitchToTab("Directories"),
-            "3":          SwitchToTab("Artists"),
-            "4":          SwitchToTab("Album Artists"),
-            "5":          SwitchToTab("Albums"),
-            "6":          SwitchToTab("Playlists"),
-            "7":          SwitchToTab("Search"),
+            "2":          SwitchToTab("Album Artists"),
+            "3":          SwitchToTab("Search"),
+            "4":          SwitchToTab("Playlists"),
+            "5":          SwitchToTab("Directories"),
             "<C-u>":      Update,
             "<C-U>":      Rescan,
             "R":          AddRandom,
@@ -218,26 +216,6 @@
             ),
         ),
         (
-            name: "Directories",
-            borders: "ALL",
-            border_symbols: Rounded,
-            pane: Split(
-                size: "100%",
-                direction: Vertical,
-                panes: [(pane: Pane(Directories), size: "100%", borders: "ALL", border_symbols: Rounded)],
-            )
-        ),
-        (
-            name: "Artists",
-            borders: "ALL",
-            border_symbols: Rounded,
-            pane: Split(
-                size: "100%",
-                direction: Vertical,
-                panes: [(pane: Pane(Artists), size: "100%", borders: "ALL", border_symbols: Rounded)],
-            )
-        ),
-        (
             name: "Album Artists",
             borders: "ALL",
             border_symbols: Rounded,
@@ -248,13 +226,13 @@
             )
         ),
         (
-            name: "Albums",
+            name: "Search",
             borders: "ALL",
             border_symbols: Rounded,
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Albums), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Rounded)],
             )
         ),
         (
@@ -268,13 +246,13 @@
             )
         ),
         (
-            name: "Search",
+            name: "Directories",
             borders: "ALL",
             border_symbols: Rounded,
             pane: Split(
                 size: "100%",
                 direction: Vertical,
-                panes: [(pane: Pane(Search), size: "100%", borders: "ALL", border_symbols: Rounded)],
+                panes: [(pane: Pane(Directories), size: "100%", borders: "ALL", border_symbols: Rounded)],
             )
         ),
     ],
