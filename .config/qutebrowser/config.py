@@ -18,6 +18,7 @@ c.url.searchengines = {
     "pypi": "https://pypi.org/search/?q={}",
     "go": "https://pkg.go.dev/search?q={}",
     "god": "https://go.dev/search?q={}",
+    "gt": "https://www.gutenberg.org/ebooks/search/?query={}",
 }
 
 ### Keybindings 

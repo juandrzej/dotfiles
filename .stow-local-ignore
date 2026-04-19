@@ -3,6 +3,7 @@
 .ansible
 archive
 setup
+envrc_templates
 README.md
 LICENSE
 Session.vim
