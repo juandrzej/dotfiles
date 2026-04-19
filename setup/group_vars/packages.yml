@@ -69,6 +69,12 @@ specific_packages:
     - zathura
     - zathura-pdf-poppler
     - direnv
+    # music daemon and tui
+    - mpd
+    - rmpc
+    - usbutils
+    # for ipod
+    - rbutil
 
   RedHat:
     - vim-enhanced

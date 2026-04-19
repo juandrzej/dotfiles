@@ -2,6 +2,7 @@
 archived_packages:
   - ibus
   - ibus-pinyin
+  - ncspot
   - nodejs
   - npm
   - gh
