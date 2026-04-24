@@ -11,8 +11,10 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
+set $term2 ghostty
 set $menu wofi --show drun
 set $browser qutebrowser
+set $browser2 com.brave.Browser
 
 
 ### SwayFX extra visual options
@@ -59,8 +61,12 @@ client.urgent            #f7768e #1a1b26 #c0caf5 #f7768e   #f7768e
 ### Key bindings
 bindsym $mod+q kill
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $term2
+bindsym $mod+m exec $term2 -e rmpc
+bindsym $mod+y exec $term -e yazi
 bindsym $mod+d exec $menu
 bindsym $mod+b exec $browser
+bindsym $mod+Shift+b exec $browser2
 bindsym $mod+x exec swaylock
 bindsym $mod+Shift+r reload
 # Exit sway (logs you out of your Wayland session)
