@@ -17,6 +17,12 @@ mvr() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
 }
 
+# mounting to user space and ownership helper func
+mnt() {
+  sudo mount -o uid=$(id -u),gid=$(id -g) "$1" ~/mnt/
+}
+
+
 # yazi func
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

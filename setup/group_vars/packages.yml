@@ -69,6 +69,9 @@ specific_packages:
     - zathura
     - zathura-pdf-poppler
     - direnv
+    - otf-codenewroman-nerd
+    - noto-fonts-emoji
+    - noto-fonts
     # music daemon and tui
     - mpd
     - rmpc
