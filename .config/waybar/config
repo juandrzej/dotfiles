@@ -4,7 +4,7 @@
     "height": 35,
     "modules-left": ["sway/workspaces", "tray", "idle_inhibitor", "sway/window"],
     "modules-center": ["clock", "clock#US"],
-    "modules-right": ["mpris", "pulseaudio", "temperature", "cpu", "memory", "network"],
+    "modules-right": ["mpd", "pulseaudio", "temperature", "cpu", "memory", "network"],
 
 
 
@@ -58,23 +58,36 @@
     },
 
     "clock#US": {
-        "tooltip": false,
+	"tooltip": false,
 	"timezone": "America/New_York"
     },
 
 
 
+    "mpd": {
+	"max-length": 30,
+	"interval": 2,
+	"state-icons": {
+	    "playing": "▶",
+	    "paused": "⏸",
+	    "stopped": "⏹",
+	},
+	"format": "{stateIcon} {artist} - {title}",
+	"format-paused": "{stateIcon} {artist} - {title}",
+	"tooltip-format": "{artist} - {title}\n{album}\n{elapsedTime:%M:%S}/{totalTime:%M:%S}",
+	"on-click": "mpc toggle",
+    },
 
-    "mpris": {
-    "format": "{status_icon} {artist} - {title}",
-    "format-paused": "{status_icon} {artist} - {title}",
-    "status-icons": {
-        "paused": "⏸",
-        "playing": "▶"
-    },
-    "max-length": 30,
-    "tooltip-format": "{player}\n{artist}\n{album}\n{title}"
-    },
+    // "mpris": {
+    // "format": "{status_icon} {artist} - {title}",
+    // "format-paused": "{status_icon} {artist} - {title}",
+    // "status-icons": {
+    //     "paused": "⏸",
+    //     "playing": "▶"
+    // },
+    // "max-length": 30,
+    // "tooltip-format": "{player}\n{artist}\n{album}\n{title}"
+    // },
 
 
     "tray": {
