@@ -413,7 +413,7 @@
                 100: "#c0caf5",
             })
     ),
-    lyrics:(timestamp: false),
+    lyrics:(timestamp: true),
     border_symbol_sets: {
     "rounded_collapsed_top": (
         parent: Rounded,
