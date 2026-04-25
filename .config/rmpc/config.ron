@@ -57,11 +57,15 @@
             "gt":         NextTab,
             "<S-Tab>":    PreviousTab,
             "gT":         PreviousTab,
-            "1":          SwitchToTab("Queue"),
-            "2":          SwitchToTab("Album Artists"),
-            "3":          SwitchToTab("Search"),
-            "4":          SwitchToTab("Playlists"),
-            "5":          SwitchToTab("Directories"),
+            "1":          SwitchToTab("Home"),
+            "2":          SwitchToTab("Cava"),
+            "3":          SwitchToTab("Queue"),
+            "4":          SwitchToTab("Search"),
+            "5":          SwitchToTab("Album Artists"),
+            "6":          SwitchToTab("Genre"),
+            "7":          SwitchToTab("Playlists"),
+            "8":          SwitchToTab("Composer"),
+            "9":          SwitchToTab("Directories"),
             "<C-u>":      Update,
             "<C-U>":      Rescan,
             "R":          AddRandom,
@@ -185,44 +189,6 @@
 
                 ])
         ),
-        (name: "Directories", pane: Split(direction: Horizontal,panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Directories)),
-                ])
-        ),
-        (name: "Playlists", pane: Split(direction: Horizontal, panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Playlists)),
-                ])
-        ),
-        (name: "Artists", pane: Split(direction: Horizontal, panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Artists)),
-                ])
-        ),
-        (name: "Albums", pane: Split(direction: Horizontal, panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Albums)),
-                ])
-        ),
-        (name: "Album Artists", pane: Split(direction: Horizontal, panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(AlbumArtists)),
-                ])
-        ),
-        (name: "Composer", pane: Split(direction: Horizontal, panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Browser(root_tag: "Composer", separator: ";"))),
-                ])
-        ),
-        (name: "Genre", pane: Split(direction: Horizontal, panes: [
-                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Browser(root_tag: "genre", separator: ";"))),
-                ])
-        ),
-        (name: "Queue", pane: Split(direction: Vertical, panes: [
-                    (size: "2", borders: "TOP | RIGHT | LEFT", border_symbols: Rounded, pane: Pane(QueueHeader())),
-                    (size: "100%", borders: "ALL", border_symbols: Library("rounded_collapsed_top"),
-                                    border_title: [(kind: Property(Song(File)), style: (fg: "#4c566a"))],
-                                    border_title_position: Bottom,
-                                    border_title_alignment: Right,
-                                    pane: Pane(Queue)),
-                        ])
-
-        ),
         (name: "Cava",pane: Split(direction: Vertical, panes: [
                     (size: "50%", pane: Split(direction: Horizontal, panes: [
                                 (size: "39%", borders: "ALL", border_symbols: Rounded, pane: Pane(Queue)),
@@ -238,8 +204,38 @@
                     (size: "50%", borders: "ALL", border_symbols: Rounded, pane: Pane(Cava)),
                 ])
         ),
+        (name: "Queue", pane: Split(direction: Vertical, panes: [
+                    (size: "2", borders: "TOP | RIGHT | LEFT", border_symbols: Rounded, pane: Pane(QueueHeader())),
+                    (size: "100%", borders: "ALL", border_symbols: Library("rounded_collapsed_top"),
+                                    border_title: [(kind: Property(Song(File)), style: (fg: "#4c566a"))],
+                                    border_title_position: Bottom,
+                                    border_title_alignment: Right,
+                                    pane: Pane(Queue)),
+                        ])
+
+        ),
         (name: "Search", pane: Split(direction: Horizontal, panes: [
                     (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Search)),
+                ])
+        ),
+        (name: "Album Artists", pane: Split(direction: Horizontal, panes: [
+                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(AlbumArtists)),
+                ])
+        ),
+        (name: "Genre", pane: Split(direction: Horizontal, panes: [
+                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Browser(root_tag: "genre", separator: ";"))),
+                ])
+        ),
+        (name: "Playlists", pane: Split(direction: Horizontal, panes: [
+                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Playlists)),
+                ])
+        ),
+        (name: "Composer", pane: Split(direction: Horizontal, panes: [
+                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Browser(root_tag: "Composer", separator: ";"))),
+                ])
+        ),
+        (name: "Directories", pane: Split(direction: Horizontal,panes: [
+                    (size: "100%", borders: "ALL", border_symbols: Rounded, pane: Pane(Directories)),
                 ])
         ),
     ],
