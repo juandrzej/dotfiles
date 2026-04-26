@@ -1,4 +1,5 @@
-theme = dark:TokyoNight Storm,light:TokyoNight Day
+# theme = dark:TokyoNight Storm,light:TokyoNight Day
+theme = TokyoNight Storm
 font-size = 11
 font-family = CodeNewRoman Nerd Font
 background-opacity = 0.5

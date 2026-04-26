@@ -10,4 +10,5 @@ fi
 
 # If running from tty1 start sway
 export QT_QPA_PLATFORMTHEME=qt5ct
+export ADW_DEBUG_COLOR_SCHEME=prefer-dark
 [ "$(tty)" = "/dev/tty1" ] && exec sway
