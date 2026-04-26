@@ -11,3 +11,4 @@ rm -rf yay/
 yay -Y --devel --save
 yay -S mkinitcpio-firmware
 yay -S swayfx
+yay -S cyanrip
