@@ -183,11 +183,9 @@ exec swaymsg 'workspace 1; exec $term'
 exec swaymsg 'workspace 2; exec $browser'
 # exec swaymsg 'workspace 3; exec obsidian'
 # exec swaymsg 'workspace 4; exec $term --working-directory /home/juandrzej/Code'
-# exec swaymsg 'workspace 6; exec $term -e ncspot'
-# exec swaymsg 'workspace 6; exec $term -e yazi'
+exec swaymsg 'workspace 6; exec $term2 -e rpmc'
+exec swaymsg 'workspace 7; exec $term2 -e yazi'
 # exec flatpak run com.brave.Browser
-# exec flatpak run md.obsidian.Obsidian
-# exec flatpak run com.spotify.Client
 
 # Return to workspace 1 after startup
 exec swaymsg 'workspace 1'
