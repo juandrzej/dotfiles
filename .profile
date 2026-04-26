@@ -3,10 +3,11 @@
 
 # Include .bashrc if running bash
 if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+	if [ -f "$HOME/.bashrc" ]; then
+		. "$HOME/.bashrc"
+	fi
 fi
 
 # If running from tty1 start sway
+export QT_QPA_PLATFORMTHEME=qt5ct
 [ "$(tty)" = "/dev/tty1" ] && exec sway
