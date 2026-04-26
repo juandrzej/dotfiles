@@ -78,6 +78,9 @@ specific_packages:
     - usbutils
     # for ipod
     - rbutil
+    # for dark qt themes
+    - qt5ct
+    - qt6ct
 
   RedHat:
     - vim-enhanced
