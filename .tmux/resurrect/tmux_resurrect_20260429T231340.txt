@@ -1,0 +1,13 @@
+pane	portfolio-mgmt-sys	1	1	:*	1	juandrzej@juandrzej-arch:~/Code/portfolio-mgmt-sys	:/home/juandrzej/Code/portfolio-mgmt-sys	1	nvim	:nvim -S
+pane	portfolio-mgmt-sys	2	0	:-	1	juandrzej@juandrzej-arch:~/Code/portfolio-mgmt-sys	:/home/juandrzej/Code/portfolio-mgmt-sys	0	bash	:
+pane	portfolio-mgmt-sys	2	0	:-	2	juandrzej@juandrzej-arch:~/Code/portfolio-mgmt-sys	:/home/juandrzej/Code/portfolio-mgmt-sys	1	bash	:
+pane	tubely	1	1	:*	1	juandrzej@juandrzej-arch:~/Code/learn-file-storage-s3-golang-starter	:/home/juandrzej/Code/learn-file-storage-s3-golang-starter	1	nvim	:nvim -S
+pane	tubely	2	0	:-	1	juandrzej@juandrzej-arch:~/Code/learn-file-storage-s3-golang-starter	:/home/juandrzej/Code/learn-file-storage-s3-golang-starter	1	bash	:
+pane	tubely	2	0	:-	2	juandrzej@juandrzej-arch:~/Code/learn-file-storage-s3-golang-starter	:/home/juandrzej/Code/learn-file-storage-s3-golang-starter	0	bash	:
+pane	tubely	3	0	:	1	juandrzej@juandrzej-arch:~/Code/learn-file-storage-s3-golang-starter	:/home/juandrzej/Code/learn-file-storage-s3-golang-starter	1	bash	:
+window	portfolio-mgmt-sys	1	:editor	1	:*	c4de,237x55,0,0,1	off
+window	portfolio-mgmt-sys	2	:terminals	0	:-	f6f9,237x55,0,0{118x55,0,0,2,118x55,119,0,3}	off
+window	tubely	1	:nvim	1	:*	c4e1,237x55,0,0,4	:
+window	tubely	2	:bash	0	:-	76fe,237x55,0,0{118x55,0,0,5,118x55,119,0,6}	:
+window	tubely	3	:bash	0	:	c4e4,237x55,0,0,7	:
+state	tubely	portfolio-mgmt-sys
