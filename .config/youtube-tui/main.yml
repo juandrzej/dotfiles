@@ -22,9 +22,9 @@ api_key: YOUR API KEY HERE
 shell: sh
 legacy_input_handling: false
 env:
-  video-player: mpv
-  browser: xdg-open
   terminal-emulator: ghostty -e
-  download-path: ~/Downloads/%(title)s-%(id)s.%(ext)s
+  browser: xdg-open
   youtube-downloader: yt-dlp
+  video-player: mpv
   save-path: ~/.local/share/youtube-tui/saved/
+  download-path: ~/Downloads/%(title)s-%(id)s.%(ext)s

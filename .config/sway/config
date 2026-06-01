@@ -173,6 +173,8 @@ assign [class="discord"] workspace 5
 
 
 ### Autostart
+# Cursor for steam
+# exec --no-startup-id export WLR_NO_HARDWARE_CURSORS=1
 # Screensharing setup line
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
@@ -180,11 +182,11 @@ exec waybar
 exec swayidle -C ~/.config/swayidle/config
 exec flatpak run com.protonvpn.www
 exec swaymsg 'workspace 1; exec $term'
-exec swaymsg 'workspace 2; exec $browser'
+# exec swaymsg 'workspace 2; exec $browser'
 # exec swaymsg 'workspace 3; exec obsidian'
 # exec swaymsg 'workspace 4; exec $term --working-directory /home/juandrzej/Code'
-exec swaymsg 'workspace 6; exec $term2 -e rpmc'
-exec swaymsg 'workspace 7; exec $term2 -e yazi'
+# exec swaymsg 'workspace 6; exec $term2 -e rpmc'
+# exec swaymsg 'workspace 7; exec $term2 -e yazi'
 # exec flatpak run com.brave.Browser
 
 # Return to workspace 1 after startup
