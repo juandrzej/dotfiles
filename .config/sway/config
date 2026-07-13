@@ -34,7 +34,7 @@ layer_effects "waybar" {
 
 ### Output configuration swaymsg -t get_outputs
 output HDMI-A-1 resolution 1920x1080 position 0,0
-output * bg ~/Pictures/tokyo4.jpg fill
+output * bg ~/Pictures/wave.jpg fill
 ### Input configuration swaymsg -t get_inputs
 input "type:keyboard" {
     xkb_layout pl,ru
@@ -173,8 +173,6 @@ assign [class="discord"] workspace 5
 
 
 ### Autostart
-# Cursor for steam
-exec --no-startup-id export WLR_NO_HARDWARE_CURSORS=1
 # Screensharing setup line
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec mako
