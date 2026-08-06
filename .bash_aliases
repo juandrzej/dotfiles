@@ -51,6 +51,8 @@ alias nf='file=$(find . -type f -not -path "*/node_modules/*" -not -path "*/__py
 alias ktmux='tmux kill-server'
 alias yt='youtube-tui'
 alias mpcc='mpc rescan && mpc update'
+alias h55='WINEPREFIX=~/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east wine "$HOME/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east/drive_c/GOG Games/Heroes of Might and Magic V - Tribes of the East/bin/MMH55_64.exe"'
+alias h55_utility='WINEPREFIX=~/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east wine "$HOME/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east/drive_c/GOG Games/Heroes of Might and Magic V - Tribes of the East/bin/MMH55_Utility_64.exe"'
 
 # Alias's for archives
 # alias mktar='tar -cvf'

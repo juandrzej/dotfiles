@@ -34,6 +34,7 @@ common_packages:
   - rsync
   - qutebrowser
   - jq
+  - steam
 
 specific_packages:
   Debian:
@@ -64,6 +65,7 @@ specific_packages:
     - uv
     - github-cli
     - obsidian
+    - qbittorrent
     - ueberzugpp
     - openssh
     - zathura
@@ -76,8 +78,7 @@ specific_packages:
     - mpd
     - rmpc
     - usbutils
-    # for ipod
-    - rbutil
+    - cyanrip
     # for dark qt themes
     - qt5ct
     - qt6ct
