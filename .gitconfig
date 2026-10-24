@@ -1,26 +1,33 @@
 [include]
-     	path = 	~/.config/git/tokyonight_moon.gitconfig
+	path = ~/.config/git/tokyonight_moon.gitconfig
+	; path = ~/.config/git/config.local
+
 [user]
 	name = juandrzej
 	email = programming.yippee729@passinbox.com
+
 [init]
 	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[merge]
+	conflictStyle = zdiff3
+
 [core]
 	editor = nvim
 	pager = delta
-[pull]
-	rebase = true
+
 [interactive]
 	diffFilter = delta --color-only
+
 [delta]
 	dark = true
 	navigate = true
-    	line-numbers = true
-[merge]
-	conflictStyle = zdiff3
+	line-numbers = true
+
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
