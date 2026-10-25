@@ -1,3 +1,8 @@
+# Open this file easily for more readabiltity.
+funcs() {
+	bat --style=numbers --language bash "$HOME/.bash_functions"
+}
+
 # Stage everything in the repo, commit with a message, then push.
 # Usage: gpush "<commit message>"
 gpush() {
