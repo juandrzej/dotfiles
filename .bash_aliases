@@ -1,9 +1,23 @@
-# Alias's to modified commands
+# General, most used
+alias ff='fastfetch'
+alias reload='source ~/.bashrc'
+alias wifi='nmcli dev wifi list'
+alias nf='file=$(find . -type f -not -path "*/node_modules/*" -not -path "*/__pycache__/*" -not -path "*/.git/*" | fzf --height 40% --layout=reverse --border --preview "head -50 {}") && nvim "$file"'
+alias ktmux='tmux kill-server'
+alias mpcc='mpc rescan && mpc update'
+
+# Git
+alias glog='git log --oneline --decorate --graph --parents'
+alias gdif='git diff'
+alias gstatus='git status'
+
+# Overwrites
 alias cp='cp -i' # prompt before overwriting files
 alias mv='mv -i'
 alias rm='trash -v'    # using safer trash-cli
 alias mkdir='mkdir -p' # auto create parent dir/s
 
+# File and dir helpers
 alias ll='lsd -l' # long format (lsd has default -h)
 alias la='lsd -A' # hidden files exluding . & ..
 alias lla='lsd -lA'
@@ -15,12 +29,11 @@ alias atreep='lsd --tree --all --ignore-glob .git --ignore-glob .venv  --ignore-
 alias rmd='/bin/rm  --recursive --force --verbose ' # Remove a directory and all files
 alias fh='fd -H'                                    # include hidden
 
-# for debian due to diff package name
-if command -v batcat >/dev/null 2>&1; then
-	alias bat='batcat'
-	alias fd='fdfind'
-	alias nala-up='sudo nala update && sudo nala upgrade'
-fi
+# Power commands
+alias nap='systemctl suspend'
+# alias bignap='systemctl suspend-then-hibernate'
+alias reset='sudo reboot'
+alias die='sudo shutdown now'
 
 # Change directory aliases
 alias ..='cd ..'
@@ -28,36 +41,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-# Popular programs shortcuts
-alias ff='fastfetch'
-alias svim='sudo vim'
-alias snvim='sudo nvim'
-
-# Power commands
-alias gomommy='systemctl suspend'
-# alias godaddy='systemctl suspend-then-hibernate'
-alias papi='sudo shutdown now'
-alias phoenix='sudo reboot'
-
-# Git aliases
-alias gitlog='git log --oneline --decorate --graph --parents'
-alias dif='git diff'
-alias status='git status'
-
-alias reload='source ~/.bashrc'
-alias wifi='nmcli dev wifi list'
-alias docker-clear-containers='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
-alias nf='file=$(find . -type f -not -path "*/node_modules/*" -not -path "*/__pycache__/*" -not -path "*/.git/*" | fzf --height 40% --layout=reverse --border --preview "head -50 {}") && nvim "$file"'
-alias ktmux='tmux kill-server'
-alias yt='youtube-tui'
-alias mpcc='mpc rescan && mpc update'
-alias h55='WINEPREFIX=~/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east wine "$HOME/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east/drive_c/GOG Games/Heroes of Might and Magic V - Tribes of the East/bin/MMH55_64.exe"'
-alias h55_utility='WINEPREFIX=~/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east wine "$HOME/Games/gog/heroes-of-might-and-magic-v-tribes-of-the-east/drive_c/GOG Games/Heroes of Might and Magic V - Tribes of the East/bin/MMH55_Utility_64.exe"'
-
-# Alias's for archives
-# alias mktar='tar -cvf'
-# alias mkbz2='tar -cvjf'
-# alias mkgz='tar -cvzf'
-# alias untar='tar -xvf'
-# alias unbz2='tar -xvjf'
-# alias ungz='tar -xvzf'
+# For debian due to diff package name
+if command -v batcat >/dev/null 2>&1; then
+	alias bat='batcat'
+	alias fd='fdfind'
+	alias nala-up='sudo nala update && sudo nala upgrade'
+fi

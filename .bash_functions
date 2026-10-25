@@ -1,6 +1,9 @@
-# Open this file easily for more readabiltity.
+# Open bash files easily for more readabiltity.
 funcs() {
 	bat --style=numbers --language bash "$HOME/.bash_functions"
+}
+aliases() {
+	bat --style=numbers --language bash "$HOME/.bash_aliases"
 }
 
 # Stage everything in the repo, commit with a message, then push.
