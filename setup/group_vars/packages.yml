@@ -71,6 +71,7 @@ specific_packages:
     - zathura
     - zathura-pdf-poppler
     - direnv
+    # fonts
     - otf-codenewroman-nerd
     - noto-fonts-emoji
     - noto-fonts
@@ -79,7 +80,6 @@ specific_packages:
     - rmpc
     - cava
     - usbutils
-    - cyanrip
     # for dark qt themes
     - qt5ct
     - qt6ct
